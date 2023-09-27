@@ -1,0 +1,12 @@
+.poker__hidecards-btn {
+    background-color: #b77a12;
+}
+.poker__showcards-btn {
+    background-color: #17a2b8;
+}
+.poker__rebuy-btn {
+    background-color: #17b890;
+}
+.poker__hidecards-btn, .poker__showcards-btn {
+    width: 100px;
+}

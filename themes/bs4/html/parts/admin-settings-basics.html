@@ -1,0 +1,65 @@
+{$ADMIN_SETTINGS_TITLE}
+<input type="text" name="title" class="form-control" size="60" maxlength="60" value="{$TITLE}">
+<small class="text-muted">{$ADMIN_SETTINGS_TITLE_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_LANDLOBBY}
+<select name="landlobby" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_LANDLOBBY_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_EMAIL}
+<select name="emailmode" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_EMAIL_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_APPROVAL}
+<select name="appmode" class="form-control"></select>
+<span class="help-block"></span>
+<br>
+
+<div class="alert alert-warning">
+	{$ADMIN_SETTINGS_APPROVAL_HELP}
+	<span class="badge badge-info">{__(Note: If Email Approval is set, an Email Address is required.)}</span>
+</div>
+
+{$ADMIN_SETTINGS_IPCHECK}
+<select name="ipcheck" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_IPCHECK_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_LOGIN}
+<select name="memmode" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_LOGIN_HELP} <span class="badge badge-warning">{__(Use with caution, this
+		could lock you out of your system if used incorrectly.)}</span></small><br>
+
+{$ADMIN_SETTINGS_AUTODELETE}
+<select name="delete" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_AUTODELETE_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_ALWAYSFOLD}
+<select name="alwaysfold" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_ALWAYSFOLD_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_STRADDLE}
+<select name="isstraddle" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_STRADDLE_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_WEBSOCKETS}
+<select name="usewebsockets" class="form-control"></select>
+<small class="text-muted">{$ADMIN_SETTINGS_WEBSOCKETS_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_WEBSOCKET_ADDR}
+<input type="text" name="websocket_addr" class="form-control" value="{$WEBSOCKET_ADDR}"
+	placeholder="wss://domain.com/ws">
+<small class="text-muted">{$ADMIN_SETTINGS_WEBSOCKET_ADDR_HELP}</small>
+<br>
+
+{$ADMIN_SETTINGS_WEBSOCKET_PORT}
+<input type="text" name="websocket_port" class="form-control" value="{$WEBSOCKET_PORT}">
+<small class="text-muted">{$ADMIN_SETTINGS_WEBSOCKET_PORT_HELP}</small>
+<br>

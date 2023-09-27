@@ -1,0 +1,344 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="nav-item">
+		<a class="nav-link active" href="#main" aria-controls="main" role="tab" data-toggle="tab">{__(Basic Settings)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#details" aria-controls="details" role="tab" data-toggle="tab">{__(Detailed Settings)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#smtp" aria-controls="smtp" role="tab" data-toggle="tab">{__(SMTP Settings)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#currency" aria-controls="currency" role="tab" data-toggle="tab">{__(Currency Settings)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#lang" aria-controls="lang" role="tab" data-toggle="tab">{__(Language Settings)}</a>
+	</li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="main">
+		<div class="col-md-12 pt-4">
+			<form name="form2" method="post" action="admin.php?admin=settings">
+				{$settings.inputs.basic}
+				<br>
+				<input type="submit" name="Submit" value="{$BUTTON_SAVE_SETTINGS}" class="btn btn-success">
+				<input type="hidden" name="action" value="update">
+			</form>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="details">
+		<div class="col-md-12 pt-4">
+			<form name="form2" method="post" action="admin.php?admin=settings">
+				{$settings.inputs.detailed}
+				<br>
+				<input type="submit" name="Submit" value="{$BUTTON_SAVE_SETTINGS}" class="btn btn-success">
+				<input type="hidden" name="action" value="update2">
+			</form>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="smtp">
+		<div class="col-md-12 pt-4">
+			<form name="form2" method="post" action="admin.php?admin=settings">
+				{$settings.inputs.smtp}
+				<br>
+				<input type="submit" name="Submit" value="{$BUTTON_SAVE_SETTINGS}" class="btn btn-success">
+				<input type="hidden" name="action" value="smtp">
+			</form>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="currency">
+		<div class="col-md-12 pt-4">
+			<form name="form2" method="post" action="admin.php?admin=settings">
+				{$settings.inputs.currency}
+				<br>
+				<input type="submit" name="Submit" value="{$BUTTON_SAVE_SETTINGS}" class="btn btn-success">
+				<input type="hidden" name="action" value="currency">
+			</form>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="lang">
+		<form method="POST" action="?admin=settings">
+			<div class="form-group pt-4">
+				<p>
+					{__(Default Language)}:
+					<select class="form-control" name="deflangp">
+						{$languages.options}
+					</select>
+				</p>
+			</div>
+			<div class="form-group">
+				<button role="submit" class="btn btn-primary">{__(Save)}</button>
+			</div>
+			<input type="hidden" name="action" value="deflang">
+		</form>
+		<hr>
+		<h4>{__(How-To-Translate DIY Guide)}</h4><br>
+
+		<p><i>Step 1:</i></p>
+		<form method="POST" action="?admin=settings">
+			<input type="hidden" name="action" value="lang-strings">
+			<button role="submit" class="btn btn-info">{__(Generate Strings)}</button>
+		</form>
+		<br><br>
+
+		<p><i>Step 2:</i></p>
+		<a href="http://www.eazypo.ca/download.html" class="btn btn-success">Download Eazy Po</a> OR <a href="https://poedit.net/download" class="btn btn-success">Download Poedit</a>
+		<br><br>
+
+		<p><i>Step 3:</i></p>
+		<strong>Download and extract this core script on your local machine and remove all addons and themes.</strong>
+		<br><br>
+
+		<p><i>Step 4:</i></p>
+		<strong>Open EazyPO/Poedit and select the core folder stored on your local machine. If you are using EazyPO, click Build &gt; Execute Command.</strong>
+		<br><br>
+
+		<p><i>Step 5:</i></p>
+		<strong>Do your translation and Save/Export/Create a .PO file. Save the file inside locale folder.</strong>
+		<br><br>
+
+		<p><i>Step 6:</i></p>
+		<strong>If you are doing this for an addon/theme, use the addon/theme script instead of the core script.</strong>
+		<br><br>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var gt = {$get};
+	if (typeof(gt.ud) !== "undefined")
+	{
+		jQuery("#admin_page_content").prepend('<div class="alert alert-success">{$ADMIN_SETTINGS_UPDATED}</div>');
+	}
+
+	var emailmode  = '{$EMAILMOD}';
+	var emailmodes = {$email_modes};
+	for (var i = 0; i < emailmodes.length; i++)
+	{
+		if (emailmodes[i].value == emailmode)
+			jQuery('select[name="emailmode"]').append('<option value="' + emailmodes[i].value + '" selected>' + emailmodes[i].label + '</option>');
+		else
+			jQuery('select[name="emailmode"]').append('<option value="' + emailmodes[i].value + '">' + emailmodes[i].label + '</option>');
+	}
+
+	var landlobby   = '{$LANDLOBBY}';
+	var landlobbies = {$land_lobbies};
+	for (var i = 0; i < landlobbies.length; i++)
+	{
+		if (landlobbies[i].value == landlobby)
+			jQuery('select[name="landlobby"]').append('<option value="' + landlobbies[i].value + '" selected>' + landlobbies[i].label + '</option>');
+		else
+			jQuery('select[name="landlobby"]').append('<option value="' + landlobbies[i].value + '">' + landlobbies[i].label + '</option>');
+	}
+
+	var appmode  = '{$APPMOD}';
+	var appmodes = {$app_modes};
+	for (var i = 0; i < appmodes.length; i++)
+	{
+		if (appmodes[i].value == appmode)
+			jQuery('select[name="appmode"]').append('<option value="' + appmodes[i].value + '" selected>' + appmodes[i].label + '</option>');
+		else
+			jQuery('select[name="appmode"]').append('<option value="' + appmodes[i].value + '">' + appmodes[i].label + '</option>');
+	}
+
+	var ipcheck  = '{$IPCHECK}';
+	var ipchecks = {$ip_checks};
+	for (var i = 0; i < ipchecks.length; i++)
+	{
+		if (ipchecks[i].value == ipcheck)
+			jQuery('select[name="ipcheck"]').append('<option value="' + ipchecks[i].value + '" selected>' + ipchecks[i].label + '</option>');
+		else
+			jQuery('select[name="ipcheck"]').append('<option value="' + ipchecks[i].value + '">' + ipchecks[i].label + '</option>');
+	}
+
+	var memsess  = '{$SESSNAME}';
+	var memmode  = '{$MEMMOD}';
+	var memmodes = {$mem_modes};
+	for (var i = 0; i < memmodes.length; i++)
+	{
+		if (memmodes[i].value == memmode)
+			jQuery('select[name="memmode"]').append('<option value="' + memmodes[i].value + '" selected>' + memmodes[i].label + '</option>');
+		else
+			jQuery('select[name="memmode"]').append('<option value="' + memmodes[i].value + '">' + memmodes[i].label + '</option>');
+	}
+	if (memmode == 1)
+	{
+		jQuery('select[name="memmode"]').next().after('{$ADMIN_SETTINGS_SESSNAME}<input type="text" name="session" size="25" class="form-control" value="{$SESSNAME}"><span id="memsessname" class="help-block">{$ADMIN_SETTINGS_SESSNAME_HELP}</span>');
+
+		if (memsess == '')
+		{
+			jQuery('#memsessname').prepend('<span class="badge badge-warning">{__(You must enter a session variable!!)}</span>');
+		}
+	}
+
+	var delet  = '{$DELETE}';
+	var delets = {$deletes};
+	for (var i = 0; i < delets.length; i++)
+	{
+		if (delets[i].value == delet)
+			jQuery('select[name="delete"]').append('<option value="' + delets[i].value + '" selected>' + delets[i].label + '</option>');
+		else
+			jQuery('select[name="delete"]').append('<option value="' + delets[i].value + '">' + delets[i].label + '</option>');
+	}
+
+	var alwaysfold  = '{$ALWAYSFOLD}';
+	var alwaysfolds = {$alwaysfolds};
+	for (var i = 0; i < alwaysfolds.length; i++)
+	{
+		if (alwaysfolds[i].value == alwaysfold)
+			jQuery('select[name="alwaysfold"]').append('<option value="' + alwaysfolds[i].value + '" selected>' + alwaysfolds[i].label + '</option>');
+		else
+			jQuery('select[name="alwaysfold"]').append('<option value="' + alwaysfolds[i].value + '">' + alwaysfolds[i].label + '</option>');
+	}
+
+	var isstraddle  = '{$ISSTRADDLE}';
+	var isstraddles = {$isstraddles};
+	for (var i = 0; i < isstraddles.length; i++)
+	{
+		if (isstraddles[i].value == isstraddle)
+			jQuery('select[name="isstraddle"]').append('<option value="' + isstraddles[i].value + '" selected>' + isstraddles[i].label + '</option>');
+		else
+			jQuery('select[name="isstraddle"]').append('<option value="' + isstraddles[i].value + '">' + isstraddles[i].label + '</option>');
+	}
+
+	var usewebsockets  = '{$USEWEBSOCKETS}';
+	var websocketlabels = {$websocketlabels};
+	for (var i = 0; i < websocketlabels.length; i++)
+	{
+		if (websocketlabels[i].value == usewebsockets)
+			jQuery('select[name="usewebsockets"]').append('<option value="' + websocketlabels[i].value + '" selected>' + websocketlabels[i].label + '</option>');
+		else
+			jQuery('select[name="usewebsockets"]').append('<option value="' + websocketlabels[i].value + '">' + websocketlabels[i].label + '</option>');
+	}
+
+	var stakesize  = '{$STAKESIZE}';
+	var stakesizes = {$stakesizes};
+	for (var i = 0; i < stakesizes.length; i++)
+	{
+		if (stakesizes[i].value == stakesize)
+			jQuery('select[name="stakesize"]').append('<option value="' + stakesizes[i].value + '" selected>' + stakesizes[i].label + '</option>');
+		else
+			jQuery('select[name="stakesize"]').append('<option value="' + stakesizes[i].value + '">' + stakesizes[i].label + '</option>');
+	}
+
+	var renew  = '{$RENEW}';
+	var renews = {$renews};
+	for (var i = 0; i < renews.length; i++)
+	{
+		if (renews[i].value == renew)
+			jQuery('select[name="renew"]').append('<option value="' + renews[i].value + '" selected>' + renews[i].label + '</option>');
+		else
+			jQuery('select[name="renew"]').append('<option value="' + renews[i].value + '">' + renews[i].label + '</option>');
+	}
+
+	var kicktimer  = '{$KICKTIMER}';
+	var kicktimers = {$kicktimers};
+	for (var i = 0; i < kicktimers.length; i++)
+	{
+		if (kicktimers[i].value == kicktimer)
+			jQuery('select[name="kick"]').append('<option value="' + kicktimers[i].value + '" selected>' + kicktimers[i].label + '</option>');
+		else
+			jQuery('select[name="kick"]').append('<option value="' + kicktimers[i].value + '">' + kicktimers[i].label + '</option>');
+	}
+
+	var movetimer  = '{$MOVETIMER}';
+	var movetimers = {$movetimers};
+	for (var i = 0; i < movetimers.length; i++)
+	{
+		if (movetimers[i].value == movetimer)
+			jQuery('select[name="move"]').append('<option value="' + movetimers[i].value + '" selected>' + movetimers[i].label + '</option>');
+		else
+			jQuery('select[name="move"]').append('<option value="' + movetimers[i].value + '">' + movetimers[i].label + '</option>');
+	}
+
+	var showdown  = '{$SHOWDOWN}';
+	var showdowns = {$showdowns};
+	for (var i = 0; i < showdowns.length; i++)
+	{
+		if (showdowns[i].value == showdown)
+			jQuery('select[name="showdown"]').append('<option value="' + showdowns[i].value + '" selected>' + showdowns[i].label + '</option>');
+		else
+			jQuery('select[name="showdown"]').append('<option value="' + showdowns[i].value + '">' + showdowns[i].label + '</option>');
+	}
+
+	var waittimer  = '{$WAITIMER}';
+	var waittimers = {$waittimers};
+	for (var i = 0; i < waittimers.length; i++)
+	{
+		if (waittimers[i].value == waittimer)
+			jQuery('select[name="wait"]').append('<option value="' + waittimers[i].value + '" selected>' + waittimers[i].label + '</option>');
+		else
+			jQuery('select[name="wait"]').append('<option value="' + waittimers[i].value + '">' + waittimers[i].label + '</option>');
+	}
+
+	var disconnect  = '{$DISCONNECT}';
+	var disconnects = {$disconnects};
+	for (var i = 0; i < disconnects.length; i++)
+	{
+		if (disconnects[i].value == disconnect)
+			jQuery('select[name="disconnect"]').append('<option value="' + disconnects[i].value + '" selected>' + disconnects[i].label + '</option>');
+		else
+			jQuery('select[name="disconnect"]').append('<option value="' + disconnects[i].value + '">' + disconnects[i].label + '</option>');
+	}
+
+	var straddletimer  = '{$STRADDLETIMR}';
+	var straddletimers = {$straddletimers};
+	for (var i = 0; i < straddletimers.length; i++)
+	{
+		if (straddletimers[i].value == straddletimer)
+			jQuery('select[name="straddletimer"]').append('<option value="' + straddletimers[i].value + '" selected>' + straddletimers[i].label + '</option>');
+		else
+			jQuery('select[name="straddletimer"]').append('<option value="' + straddletimers[i].value + '">' + straddletimers[i].label + '</option>');
+	}
+
+	var raisebutton  = {$raisebutton};
+	var raisebuttons = {$raisebuttons};
+	for (var i = 0; i < raisebuttons.length; i++)
+	{
+		if (raisebutton.includes(raisebuttons[i].value))
+		{
+			jQuery("#raisebuttonsContainer").append(`<div class="form-check">
+				<input class="form-check-input" name="raisebuttons[]" type="checkbox" value="` + raisebuttons[i].value + `" id="raiseButton` + i + `" checked>
+				<label class="form-check-label" for="raiseButton` + i + `">` + raisebuttons[i].label + `</label>
+			</div>`);
+		}
+		else
+		{
+			jQuery("#raisebuttonsContainer").append(`<div class="form-check">
+				<input class="form-check-input" name="raisebuttons[]" type="checkbox" value="` + raisebuttons[i].value + `" id="raiseButton` + i + `">
+				<label class="form-check-label" for="raiseButton` + i + `">` + raisebuttons[i].label + `</label>
+			</div>`);
+		}
+	}
+	jQuery("select.dropdown").dropdown();
+
+	var tmrleftsound  = '{$TMRLEFTSOUND}';
+	var tmrleftsounds = {$tmrleftsounds};
+	for (var i = 0; i < tmrleftsounds.length; i++)
+	{
+		if (tmrleftsounds[i].value == tmrleftsound)
+			jQuery('select[name="tmrleftsound"]').append('<option value="' + tmrleftsounds[i].value + '" selected>' + tmrleftsounds[i].label + '</option>');
+		else
+			jQuery('select[name="tmrleftsound"]').append('<option value="' + tmrleftsounds[i].value + '">' + tmrleftsounds[i].label + '</option>');
+	}
+
+	var playbfrcard  = '{$PLAYBFRCARDS}';
+	var playbfrcards = {$playbfrcards};
+	for (var i = 0; i < playbfrcards.length; i++)
+	{
+		if (playbfrcards[i].value == playbfrcard)
+			jQuery('select[name="playbfrcards"]').append('<option value="' + playbfrcards[i].value + '" selected>' + playbfrcards[i].label + '</option>');
+		else
+			jQuery('select[name="playbfrcards"]').append('<option value="' + playbfrcards[i].value + '">' + playbfrcards[i].label + '</option>');
+	}
+</script>

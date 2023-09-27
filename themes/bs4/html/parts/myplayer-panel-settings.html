@@ -1,0 +1,22 @@
+<div class="tab-pane pt-4" id="settings" role="tabpanel">
+	<!-- Start Change Password -->
+	<h3>{$player_settings_label}</h3>
+	<form name="form1" method="post" action="">
+
+        <div class="form-group">
+            <label for="revealCards">{__(Reveal cards on Showdown)}:</label>
+            <select name="show_cards" class="form-control" id="revealCards" aria-describedby="revealCardsHelp">
+                <option value="1">{__(Yes)}</option>
+                <option value="0">{__(No)}</option>
+            </select>
+            <small id="revealCardsHelp" class="form-text text-muted">{__(Choose whether you would like to show your cards to other players during showdown.)}</small>
+        </div>
+
+		<input type="hidden" name="action" value="update_settings">
+		<input type="submit" name="Submit" value="{$player_submit_button_label}" class="btn btn-success">
+	</form>
+
+    <script type="text/javascript">
+        jQuery("#revealCards").val({$user.show_cards});
+    </script>
+</div>

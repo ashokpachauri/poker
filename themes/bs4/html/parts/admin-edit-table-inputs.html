@@ -1,0 +1,135 @@
+<input type="hidden" name="action" value="edittable">
+<input type="hidden" name="gameID" value="{$table.gameID}">
+
+{$ADMIN_TABLES_NAME}
+<input type="text" name="tablename" class="form-control" size="60" maxlength="60" value="{$table.tablename}">
+<span class="help-block"></span>
+<br>
+
+{__(Table Type:)}
+<select id="ttype" class="form-control" name="tabletype"></select>
+<script type="text/javascript">
+	var tt = {$table_types};
+	for (var i = 0; i < tt.length; i++)
+	{
+        let sel = tt[i].selected == true ? 'selected' : '';
+		jQuery('#ttype').append('<option value="' + tt[i].value + '" ' + sel + '>' + tt[i].label + '</option>');
+	}
+</script>
+<br>
+
+{$ADMIN_TABLES_GAME}
+<select name="gamestyle" class="form-control"></select>
+<script type="text/javascript">
+    var gs = {$game_styles};
+    for (var i = 0; i < gs.length; i++)
+    {
+        if (gs[i].value == '{$table.gamestyle}')
+            jQuery('select[name="gamestyle"]').append('<option value="' + gs[i].value + '" selected>' + gs[i].label + '</option>');
+        else
+            jQuery('select[name="gamestyle"]').append('<option value="' + gs[i].value + '">' + gs[i].label + '</option>');
+    }
+</script>
+<span class="help-block"></span>
+<br>
+
+{$ADMIN_TABLES_MIN}
+<select name="tablelow" class="form-control"></select>
+<script type="text/javascript">
+    var minb = {$min_buyins};
+    for (var i = 0; i < minb.length; i++)
+    {
+        if (minb[i].value == '{$table.tablelow}')
+            jQuery('select[name="tablelow"]').append('<option value="' + minb[i].value + '" selected>' + minb[i].label + '</option>');
+        else
+            jQuery('select[name="tablelow"]').append('<option value="' + minb[i].value + '">' + minb[i].label + '</option>');
+    }
+</script>
+<span class="help-block"></span>
+<br>
+
+{$ADMIN_TABLES_MAX}
+<select name="tablelimit" class="form-control"></select>
+<script type="text/javascript">
+    var maxb = {$max_buyins};
+    for (var i = 0; i < maxb.length; i++)
+    {
+        if (maxb[i].value == '{$table.tablelimit}')
+            jQuery('select[name="tablelimit"]').append('<option value="' + maxb[i].value + '" selected>' + maxb[i].label + '</option>');
+        else
+            jQuery('select[name="tablelimit"]').append('<option value="' + maxb[i].value + '">' + maxb[i].label + '</option>');
+    }
+</script>
+<span class="help-block"></span>
+<br>
+
+{$ADMIN_TABLES_SB}:
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div> 
+  <input class="form-control" maxlength="25" name="sbamount" type="text" value="{$sblind}">
+</div>
+<br>
+
+{$ADMIN_TABLES_BB}:  
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div> 
+  <input class="form-control" maxlength="25" name="bbamount" type="text" value="{$bblind}">
+</div>
+<br>
+
+
+{$ADMIN_TABLES_STYLE}
+<select name="tablestyle" class="form-control"></select>
+<script type="text/javascript">
+    var ts = {$table_styles};
+    for (var i = 0; i < ts.length; i++)
+    {
+        if (ts[i].value == '{$table.tablestyle}')
+            jQuery('select[name="tablestyle"]').append('<option value="' + ts[i].value + '" selected>' + ts[i].label + '</option>');
+        else
+            jQuery('select[name="tablestyle"]').append('<option value="' + ts[i].value + '">' + ts[i].label + '</option>');
+    }
+</script>
+<span class="help-block"></span>
+<br>
+
+
+{__(Table Animations)}
+<select name="tableanim" class="form-control"></select>
+<script type="text/javascript">
+    var tblanm = {$table_anims};
+    for (var i = 0; i < tblanm.length; i++)
+    {
+        if (tblanm[i].value == '{$table.tableanim}')
+            jQuery('select[name="tableanim"]').append('<option value="' + tblanm[i].value + '" selected>' + tblanm[i].label + '</option>');
+        else
+            jQuery('select[name="tableanim"]').append('<option value="' + tblanm[i].value + '">' + tblanm[i].label + '</option>');
+    }
+</script>
+<span class="help-block"></span>
+<br>
+
+<div id ="allow_straddle">
+    {__(Allow Straddle)}
+    <select name="is_straddle" class="form-control"></select>
+    <script type="text/javascript">
+        var tblstrdls = {$table_straddles};
+        for (var i = 0; i < tblstrdls.length; i++)
+        {
+            if (tblstrdls[i].value == '{$table.is_straddle}')
+                jQuery('select[name="is_straddle"]').append('<option value="' + tblstrdls[i].value + '" selected>' + tblstrdls[i].label + '</option>');
+            else
+                jQuery('select[name="is_straddle"]').append('<option value="' + tblstrdls[i].value + '">' + tblstrdls[i].label + '</option>');
+        }
+    </script>
+    <span class="help-block"></span>
+    <br>
+</div>
+<script type="text/javascript">
+    if ('{$ISSTRADDLE}' !== 'yes')
+        jQuery("#allow_straddle").remove();
+</script>

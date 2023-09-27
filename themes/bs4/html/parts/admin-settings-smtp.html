@@ -1,0 +1,44 @@
+{__(Use SMTP)}
+<select name="smtp_on" class="form-control">
+    <option value="yes">{__(Yes)}</option>
+    <option value="no">{__(No)}</option>
+</select>
+<br>
+
+{__(SMTP Host)}
+<input type="text" name="smtp_host" class="form-control" value="{$SMTP_HOST}">
+<br>
+
+{__(SMTP Port)}
+<input type="text" name="smtp_port" class="form-control" value="{$SMTP_PORT}">
+<br>
+
+{__(Encryption)}
+<select name="smtp_encrypt" class="form-control">
+    <option value="none">{__(None)}</option>
+    <option value="SSL">{__(SSL)}</option>
+    <option value="TLS">{__(TLS)}</option>
+</select>
+<small class="text-muted">{__(TLS is not the same as STARTTLS. For most servers SSL is the recommended option.)}</small>
+<br><br>
+
+{__(Authentication)}
+<select name="smtp_auth" class="form-control">
+    <option value="yes">{__(Yes)}</option>
+    <option value="no">{__(No)}</option>
+</select>
+<br>
+
+{__(SMTP Username)}
+<input type="text" name="smtp_user" class="form-control" value="{$SMTP_USER}">
+<br>
+
+{__(SMTP Password)}
+<input type="text" name="smtp_pass" class="form-control" value="{$SMTP_PASS}">
+<br>
+
+<script type="text/javascript">
+jQuery("select[name='smtp_on']").val('{$SMTP_ON}');
+jQuery("select[name='smtp_encrypt']").val('{$SMTP_ENCRYPT}');
+jQuery("select[name='smtp_auth']").val('{$SMTP_AUTH}');
+</script>

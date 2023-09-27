@@ -1,0 +1,50 @@
+	<div id="footer" class="container">
+		<hr>
+		<footer>
+			{$footer_content <!-- html/parts/footer-content.html -->}
+		</footer>
+	</div>
+	
+	{$scripts.footer}
+
+	<div id="wvLoader" style="display: none;">
+	    <div style="position: absolute; width: 100%; height: 100%; margin: 0 auto; padding: 200px 0;">
+	        <div align="center">
+	            <img src="{$theme.url}/images/spin.gif">
+	        </div>
+	    </div>
+	</div>
+	<script type="text/javascript">
+		function isApp() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod|Android/i);
+        }
+	    function wvLoader()
+	    {
+	        jQuery("#wvLoader").css({
+	            "position": "fixed",
+	            "top": 0,
+	            "left": 0,
+	            "width": "100%",
+	            "height": "100%",
+	            "z-index": "999",
+	            "background": "rgba(0, 0, 0, 0.7)"
+	        }).show();
+	    }
+	    jQuery("a[href!='#']").click(function(e)
+	    {
+	        if (isApp())
+	        	wvLoader();
+	    });
+		function openPage(slug)
+		{
+			if ( jQuery("#page_modal_" + slug).length == 0 )
+			{
+				window.location.href = slug + '.php';
+				return;
+			}
+
+			jQuery("#page_modal_" + slug).modal("show");
+		}
+	</script>
+</body>
+</html>

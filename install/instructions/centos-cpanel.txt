@@ -1,0 +1,41 @@
+YOU NEED ROOT ACCESS TO YOUR SSH TERMINAL!
+
+# Allow public access to port 3000 (or any other port number to your liking). Talk to your hosting provider, they can do it for you.
+
+# Login to your terminal as root and run the following command in terminal, replace {USERNAME} with your cPanel username, {DOMAIN} with your domain:
+
+sudo mkdir -p /etc/apache2/conf.d/userdata/std/2_4/{USERNAME}/{DOMAIN}
+sudo mkdir -p /etc/apache2/conf.d/userdata/ssl/2_4/{USERNAME}/{DOMAIN}
+sudo touch /etc/apache2/conf.d/userdata/std/2_4/{USERNAME}/{DOMAIN}/proxy_pass.conf
+sudo touch /etc/apache2/conf.d/userdata/ssl/2_4/{USERNAME}/{DOMAIN}/proxy_pass.conf
+
+Open the above 2 files using nano (sudo nano FILE_PATH) or any editor of your choice and add the following lines, replace 3000 with your choice of port:
+
+ProxyPass /.well-known !
+ProxyPass /ws ws://{DOMAIN}:3000
+ProxyPassReverse /ws ws://{DOMAIN}:3000
+
+Save the file. If you are using nano editor, press Ctrl + X, then press Y and Enter/Return.
+
+Rebuild settings and restart the services using the following commands:
+
+/scripts/rebuildhttpdconf
+service httpd restart
+
+Done!
+Now login as admin to your poker installation, go to settings and set the WebSocket address to: wss://{DOMAIN}/ws
+And set the port number to your port of choice.
+
+Finally, go to terminal again and run the following command, {PATH} is your poker installation absolute path, for example: /home/{USERNAME}/public_html
+
+cd {PATH}
+
+If you aree testing, for example in a development server. Run this command:
+
+php server.php
+
+Or if you want to keep the websocket server live at all times, which you would want in a production server. Run this command:
+
+nohup php server.php
+
+WebSocket server is now live and gameplay should work.

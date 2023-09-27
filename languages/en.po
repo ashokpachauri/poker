@@ -1,0 +1,2253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-08 11:53+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/addon-settings.php:130
+msgid "Choose"
+msgstr "Choose"
+
+#: admin/edit-table.php:24 includes/language.php:48
+msgid "Tournament"
+msgstr "Tournament"
+
+#: admin/edit-table.php:24 includes/language.php:47
+msgid "Sit 'n Go"
+msgstr "Sit 'n Go"
+
+#: admin/edit-table.php:88 admin/edit-table.php:104 admin/settings.php:42
+#: admin/settings.php:49 admin/settings.php:149 admin/tables.php:453
+#: themes/bs4/strings.php:191
+msgid "Yes"
+msgstr "Yes"
+
+#: admin/edit-table.php:89 admin/edit-table.php:103 admin/settings.php:43
+#: admin/settings.php:50 admin/settings.php:150 admin/tables.php:454
+#: themes/bs4/strings.php:192
+msgid "No"
+msgstr "No"
+
+#: admin/members.php:84 themes/bs4/strings.php:13
+msgid "All Members"
+msgstr "All Members"
+
+#: admin/settings.php:3 admin/settings.php:18 admin/settings.php:25
+#: admin/settings.php:65 admin/settings.php:143
+msgid "Off"
+msgstr "Off"
+
+#: admin/settings.php:4 admin/settings.php:19 admin/settings.php:26
+#: admin/settings.php:66 admin/settings.php:142
+msgid "On"
+msgstr "On"
+
+#: admin/settings.php:10
+msgid "Automatic"
+msgstr "Automatic"
+
+#: admin/settings.php:11
+msgid "Email Approval"
+msgstr "Email Approval"
+
+#: admin/settings.php:12
+msgid "Administrator Approval"
+msgstr "Administrator Approval"
+
+#: admin/settings.php:32
+msgid "After 30 days of inactivity"
+msgstr "After 30 days of inactivity"
+
+#: admin/settings.php:33
+msgid "After 60 days of inactivity"
+msgstr "After 60 days of inactivity"
+
+#: admin/settings.php:34
+msgid "After 90 days of inactivity"
+msgstr "After 90 days of inactivity"
+
+#: admin/settings.php:35
+msgid "After 180 days of inactivity"
+msgstr "After 180 days of inactivity"
+
+#: admin/settings.php:36
+msgid "Never"
+msgstr "Never"
+
+#: admin/settings.php:56
+msgid "Tiny Stakes [$10+]"
+msgstr "Tiny Stakes [$10+]"
+
+#: admin/settings.php:57
+msgid "Low Stakes [$100+]"
+msgstr "Low Stakes [$100+]"
+
+#: admin/settings.php:58
+msgid "Medium Stakes [$1000+]"
+msgstr "Medium Stakes [$1000+]"
+
+#: admin/settings.php:59
+msgid "High Rollers [$10k+]"
+msgstr "High Rollers [$10k+]"
+
+#: admin/settings.php:72
+msgid "3 mins"
+msgstr "3 mins"
+
+#: admin/settings.php:73
+msgid "5 mins"
+msgstr "5 mins"
+
+#: admin/settings.php:74
+msgid "7 mins"
+msgstr "7 mins"
+
+#: admin/settings.php:75
+msgid "10 mins"
+msgstr "10 mins"
+
+#: admin/settings.php:76
+msgid "15 mins"
+msgstr "15 mins"
+
+#: admin/settings.php:82
+msgid "Turbo"
+msgstr "Turbo"
+
+#: admin/settings.php:83
+msgid "Fast"
+msgstr "Fast"
+
+#: admin/settings.php:84
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/settings.php:85
+msgid "Slow"
+msgstr "Slow"
+
+#: admin/settings.php:91
+msgid "3 secs"
+msgstr "3 secs"
+
+#: admin/settings.php:92 admin/settings.php:120
+msgid "5 secs"
+msgstr "5 secs"
+
+#: admin/settings.php:93 admin/settings.php:121
+msgid "7 secs"
+msgstr "7 secs"
+
+#: admin/settings.php:94 admin/settings.php:101 admin/settings.php:122
+msgid "10 secs"
+msgstr "10 secs"
+
+#: admin/settings.php:100 themes/bs4/strings.php:196
+msgid "None"
+msgstr "None"
+
+#: admin/settings.php:102 admin/settings.php:110 admin/settings.php:124
+msgid "15 secs"
+msgstr "15 secs"
+
+#: admin/settings.php:103 admin/settings.php:125
+msgid "20 secs"
+msgstr "20 secs"
+
+#: admin/settings.php:104
+msgid "25 secs"
+msgstr "25 secs"
+
+#: admin/settings.php:111 admin/settings.php:126
+msgid "30 secs"
+msgstr "30 secs"
+
+#: admin/settings.php:112
+msgid "60 secs"
+msgstr "60 secs"
+
+#: admin/settings.php:113
+msgid "90 secs"
+msgstr "90 secs"
+
+#: admin/settings.php:114
+msgid "120 secs"
+msgstr "120 secs"
+
+#: admin/settings.php:123
+msgid "12 secs"
+msgstr "12 secs"
+
+#: admin/settings.php:132
+msgid "2 big blinds"
+msgstr "2 big blinds"
+
+#: admin/settings.php:133
+msgid "1 big blind"
+msgstr "1 big blind"
+
+#: admin/settings.php:134
+msgid "Pot"
+msgstr "Pot"
+
+#: admin/settings.php:135
+msgid "1/2 Pot"
+msgstr "1/2 Pot"
+
+#: admin/tables.php:204
+msgid "Omaha Hold 'em"
+msgstr "Omaha Hold 'em"
+
+#: admin/tables.php:206
+msgid "Texas Hold 'em"
+msgstr "Texas Hold 'em"
+
+#: admin/themes.php:94
+msgid "You need to enable Zip extension in your server"
+msgstr "You need to enable Zip extension in your server"
+
+#: admin/themes.php:114
+msgid "empty"
+msgstr "empty"
+
+#: admin/themes.php:152
+msgid "Up to date"
+msgstr "Up to date"
+
+#: frontpages/approve.php:12
+msgid "Click here to install OPS V2"
+msgstr "Click here to install OPS V2"
+
+#: frontpages/approve.php:13
+msgid "Unable to select database"
+msgstr "Unable to select database"
+
+#: frontpages/create.php:166
+msgid "Player Activation Email"
+msgstr "Player Activation Email"
+
+#: frontpages/login.php:75
+msgid "Please enter your email address."
+msgstr "Please enter your email address."
+
+#: frontpages/login.php:92
+msgid "Email Not Valid - Must be in format of name@domain.tld"
+msgstr "Email Not Valid - Must be in format of name@domain.tld"
+
+#: frontpages/login.php:103
+msgid "Email Not Found!"
+msgstr "Email Not Found!"
+
+#: frontpages/login.php:120
+#, php-format
+msgid "Your new password is as follows:\n\t\t---------------------------- \n\t\tPassword: %s\n"\t\n\t\t---------------------------- \n\t\tPlease change your password when you login via your account page.\n\t\n"\t\tThis email was automatically generated."
+msgstr "Your new password is as follows:\n\t\t---------------------------- \n\t\tPassword: %s\n"\t\n\t\t---------------------------- \n\t\tPlease change your password when you login via your account page.\n\t\n"\t\tThis email was automatically generated."
+
+#: frontpages/login.php:131
+#, php-format
+msgid "Sending Email Failed, Please Contact Site Admin! (%s)"
+msgstr "Sending Email Failed, Please Contact Site Admin! (%s)"
+
+#: frontpages/login.php:135
+msgid "New Password Sent!"
+msgstr "New Password Sent!"
+
+#: frontpages/login.php:136
+#, php-format
+msgid "%s reset his password."
+msgstr "%s reset his password."
+
+#: includes/gen_inc.php:407
+msgid "Regular"
+msgstr "Regular"
+
+#: includes/inc_admin.php:170
+#, php-format
+msgid "%s created a new table %s"
+msgstr "%s created a new table %s"
+
+#: includes/inc_admin.php:206
+#, php-format
+msgid "The style %s has been added!"
+msgstr "The style %s has been added!"
+
+#: includes/inc_admin.php:210
+msgid "There was an error, please try again!"
+msgstr "There was an error, please try again!"
+
+#: includes/inc_admin.php:228
+#, php-format
+msgid "%s added a new table style."
+msgstr "%s added a new table style."
+
+#: includes/inc_admin.php:252
+#, php-format
+msgid "%s banned user %s."
+msgstr "%s banned user %s."
+
+#: includes/inc_admin.php:260
+#, php-format
+msgid "%s unbanned user %s."
+msgstr "%s unbanned user %s."
+
+#: includes/inc_admin.php:266
+#, php-format
+msgid "%s reset the stats for user %s."
+msgstr "%s reset the stats for user %s."
+
+#: includes/inc_admin.php:271
+#, php-format
+msgid "%s approved user %s."
+msgstr "%s approved user %s."
+
+#: includes/inc_admin.php:278
+#, php-format
+msgid "%s deleted user %s."
+msgstr "%s deleted user %s."
+
+#: includes/inc_admin.php:292
+msgid "Texas Holdem Poker"
+msgstr "Texas Holdem Poker"
+
+#: includes/inc_admin.php:364
+#, php-format
+msgid "%s updated Basic settings."
+msgstr "%s updated Basic settings."
+
+#: includes/inc_admin.php:496
+#, php-format
+msgid "%s updated Detailed settings."
+msgstr "%s updated Detailed settings."
+
+#: includes/inc_admin.php:527
+#, php-format
+msgid "%s updated SMTP settings."
+msgstr "%s updated SMTP settings."
+
+#: includes/inc_admin.php:570
+#, php-format
+msgid "%s updated Currency settings."
+msgstr "%s updated Currency settings."
+
+#: includes/inc_admin.php:640
+#, php-format
+msgid "%s edited table %s"
+msgstr "%s edited table %s"
+
+#: includes/inc_admin.php:682
+#, php-format
+msgid "%s edited user %s"
+msgstr "%s edited user %s"
+
+#: includes/inc_admin.php:708
+#, php-format
+msgid "%s %s %s in %s\\'s bank. Old amount: %s. New amount: %s."
+msgstr "%s %s %s in %s\\'s bank. Old amount: %s. New amount: %s."
+
+#: includes/inc_admin.php:758
+#, php-format
+msgid "%s updated the script version to %s"
+msgstr "%s updated the script version to %s"
+
+#: includes/inc_lobby.php:33
+msgid "Please install Omaha hold em add-on."
+msgstr "Please install Omaha hold em add-on."
+
+#: includes/inc_poker.php:135
+msgid "leaves the table"
+msgstr "leaves the table"
+
+#: includes/inc_poker.php:167
+#, php-format
+msgid "%s left the table with %s. New bank amount: %s."
+msgstr "%s left the table with %s. New bank amount: %s."
+
+#: includes/join.php:234
+#, php-format
+msgid "%s joined table %s on seat %s with %s pot"
+msgstr "%s joined table %s on seat %s with %s pot"
+
+#: includes/join.php:237
+#, php-format
+msgid "%s joined table %s on seat %s with %s pot which cost him %s"
+msgstr "%s joined table %s on seat %s with %s pot which cost him %s"
+
+#: includes/join.php:239
+#, php-format
+msgid ", he has %s left in his bank"
+msgstr ", he has %s left in his bank"
+
+#: includes/join.php:269
+msgid "You cannot join this table"
+msgstr "You cannot join this table"
+
+#: includes/language.php:11
+msgid "File size is too big"
+msgstr "File size is too big"
+
+#: includes/language.php:17
+msgid "Welcome To"
+msgstr "Welcome To"
+
+#: includes/language.php:18 includes/language.php:33 includes/language.php:69
+msgid "Login"
+msgstr "Login"
+
+#: includes/language.php:19
+msgid "Create Player"
+msgstr "Create Player"
+
+#: includes/language.php:20
+msgid "Game Lobby"
+msgstr "Game Lobby"
+
+#: includes/language.php:21
+msgid "Player Rankings"
+msgstr "Player Rankings"
+
+#: includes/language.php:22
+msgid "My Player"
+msgstr "My Player"
+
+#: includes/language.php:23
+msgid "Poker Rules"
+msgstr "Poker Rules"
+
+#: includes/language.php:24
+msgid "Frequently Asked Questions"
+msgstr "Frequently Asked Questions"
+
+#: includes/language.php:25 includes/language.php:40
+msgid "Admin"
+msgstr "Admin"
+
+#: includes/language.php:26 includes/language.php:41
+msgid "Log Out"
+msgstr "Log Out"
+
+#: includes/language.php:27
+msgid "Sit Out Page"
+msgstr "Sit Out Page"
+
+#: includes/language.php:32
+msgid "Home"
+msgstr "Home"
+
+#: includes/language.php:34
+msgid "Register"
+msgstr "Register"
+
+#: includes/language.php:35 themes/bs4/strings.php:85
+msgid "Lobby"
+msgstr "Lobby"
+
+#: includes/language.php:36
+msgid "Rankings"
+msgstr "Rankings"
+
+#: includes/language.php:37
+msgid "Profile"
+msgstr "Profile"
+
+#: includes/language.php:38
+msgid "Rules"
+msgstr "Rules"
+
+#: includes/language.php:39
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/language.php:46
+msgid "Cash Games"
+msgstr "Cash Games"
+
+#: includes/language.php:49
+msgid "DEALER INFORMATION"
+msgstr "DEALER INFORMATION"
+
+#: includes/language.php:50
+msgid "TABLEPOT:"
+msgstr "TABLEPOT:"
+
+#: includes/language.php:51
+msgid "LEAVE TABLE"
+msgstr "LEAVE TABLE"
+
+#: includes/language.php:52
+msgid "Send"
+msgstr "Send"
+
+#: includes/language.php:57
+msgid "st"
+msgstr "st"
+
+#: includes/language.php:58
+msgid "nd"
+msgstr "nd"
+
+#: includes/language.php:59
+msgid "rd"
+msgstr "rd"
+
+#: includes/language.php:60
+msgid "th"
+msgstr "th"
+
+#: includes/language.php:61
+msgid "Place"
+msgstr "Place"
+
+#: includes/language.php:66
+msgid "Player Login"
+msgstr "Player Login"
+
+#: includes/language.php:67 includes/language.php:85 includes/language.php:140
+msgid "Player Name:"
+msgstr "Player Name:"
+
+#: includes/language.php:68 includes/language.php:86
+msgid "Password:"
+msgstr "Password:"
+
+#: includes/language.php:70
+msgid "Click here to create a new player"
+msgstr "Click here to create a new player"
+
+#: includes/language.php:71
+msgid "Account pending approval"
+msgstr "Account pending approval"
+
+#: includes/language.php:72
+msgid "This account has been banned!"
+msgstr "This account has been banned!"
+
+#: includes/language.php:73
+msgid "Invalid Login!"
+msgstr "Invalid Login!"
+
+#: includes/language.php:78
+msgid "Sit Out Timer"
+msgstr "Sit Out Timer"
+
+#: includes/language.php:83
+msgid "Create Your Player"
+msgstr "Create Your Player"
+
+#: includes/language.php:84
+msgid "Choose Your Avatar"
+msgstr "Choose Your Avatar"
+
+#: includes/language.php:87
+msgid "Confirm:"
+msgstr "Confirm:"
+
+#: includes/language.php:88
+msgid "Email Address:"
+msgstr "Email Address:"
+
+#: includes/language.php:89 includes/language.php:164
+msgid "[ 5-10 chars ]"
+msgstr "[ 5-10 chars ]"
+
+#: includes/language.php:90
+msgid "Your IP Address is banned!"
+msgstr "Your IP Address is banned!"
+
+#: includes/language.php:91
+msgid "Missing fields, please try again."
+msgstr "Missing fields, please try again."
+
+#: includes/language.php:92
+msgid "Authentication Error!"
+msgstr "Authentication Error!"
+
+#: includes/language.php:93
+msgid "You have already created a player!"
+msgstr "You have already created a player!"
+
+#: includes/language.php:94
+msgid "This email address is not valid."
+msgstr "This email address is not valid."
+
+#: includes/language.php:95
+msgid "Username already taken. Please try again."
+msgstr "Username already taken. Please try again."
+
+#: includes/language.php:96
+msgid "Username has too many m's or w's in it!"
+msgstr "Username has too many m's or w's in it!"
+
+#: includes/language.php:97
+msgid "Usernames can contain letters, numbers and underscores."
+msgstr "Usernames can contain letters, numbers and underscores."
+
+#: includes/language.php:98
+msgid "Your username must be 5-10 characters long."
+msgstr "Your username must be 5-10 characters long."
+
+#: includes/language.php:99
+msgid "Passwords can contain letters, numbers and underscores."
+msgstr "Passwords can contain letters, numbers and underscores."
+
+#: includes/language.php:100
+msgid "Your password must be at least 4 characters long."
+msgstr "Your password must be at least 4 characters long."
+
+#: includes/language.php:101
+msgid "Your password and confirmation must match!"
+msgstr "Your password and confirmation must match!"
+
+#: includes/language.php:102
+msgid "Please select an avatar"
+msgstr "Please select an avatar"
+
+#: includes/language.php:103
+msgid "Thank you for applying to join our poker game. Please click the link to activate your player:"
+msgstr "Thank you for applying to join our poker game. Please click the link to activate your player:"
+
+#: includes/language.php:104
+msgid "An activation email has been sent to the address you gave us."
+msgstr "An activation email has been sent to the address you gave us."
+
+#: includes/language.php:105
+msgid "Create Account"
+msgstr "Create Account"
+
+#: includes/language.php:106 themes/bs4/strings.php:82
+msgid "Submit"
+msgstr "Submit"
+
+#: includes/language.php:111 includes/language.php:243
+msgid "Table Name"
+msgstr "Table Name"
+
+#: includes/language.php:112
+msgid "Players"
+msgstr "Players"
+
+#: includes/language.php:113 includes/language.php:244
+msgid "Table Type"
+msgstr "Table Type"
+
+#: includes/language.php:114
+msgid "Buy In"
+msgstr "Buy In"
+
+#: includes/language.php:115
+msgid "Small Blinds"
+msgstr "Small Blinds"
+
+#: includes/language.php:116
+msgid "Big Blinds"
+msgstr "Big Blinds"
+
+#: includes/language.php:117
+msgid "Table Status"
+msgstr "Table Status"
+
+#: includes/language.php:118
+msgid "New Game"
+msgstr "New Game"
+
+#: includes/language.php:119
+msgid "Playing"
+msgstr "Playing"
+
+#: includes/language.php:124
+msgid "Player Profile"
+msgstr "Player Profile"
+
+#: includes/language.php:125
+msgid "Your Player Is Broke!!"
+msgstr "Your Player Is Broke!!"
+
+#: includes/language.php:126
+msgid "Player Statistics:"
+msgstr "Player Statistics:"
+
+#: includes/language.php:127
+msgid "Choose Avatar"
+msgstr "Choose Avatar"
+
+#: includes/language.php:128
+msgid "Change Password"
+msgstr "Change Password"
+
+#: includes/language.php:129 includes/language.php:181
+#: themes/bs4/strings.php:173
+msgid "Settings"
+msgstr "Settings"
+
+#: includes/language.php:130
+msgid "Answer:"
+msgstr "Answer:"
+
+#: includes/language.php:131
+msgid "Administrator"
+msgstr "Administrator"
+
+#: includes/language.php:132
+msgid "VIP Account"
+msgstr "VIP Account"
+
+#: includes/language.php:133
+msgid "Terms & Conditions"
+msgstr "Terms & Conditions"
+
+#: includes/language.php:134
+msgid "Standard Avatars"
+msgstr "Standard Avatars"
+
+#: includes/language.php:135
+msgid "Custom Avatars"
+msgstr "Custom Avatars"
+
+#: includes/language.php:136
+msgid "Game Statistics"
+msgstr "Game Statistics"
+
+#: includes/language.php:137
+msgid "Hand Statistics"
+msgstr "Hand Statistics"
+
+#: includes/language.php:138
+msgid "Move Statistics"
+msgstr "Move Statistics"
+
+#: includes/language.php:139
+msgid "Fold Statistics"
+msgstr "Fold Statistics"
+
+#: includes/language.php:141
+msgid "Player Ranking:"
+msgstr "Player Ranking:"
+
+#: includes/language.php:142
+msgid "Player Created:"
+msgstr "Player Created:"
+
+#: includes/language.php:143
+msgid "Bankroll:"
+msgstr "Bankroll:"
+
+#: includes/language.php:144
+msgid "Last login:"
+msgstr "Last login:"
+
+#: includes/language.php:145
+msgid "Games Played:"
+msgstr "Games Played:"
+
+#: includes/language.php:146
+msgid "Tournaments Played:"
+msgstr "Tournaments Played:"
+
+#: includes/language.php:147
+msgid "Tournaments Won:"
+msgstr "Tournaments Won:"
+
+#: includes/language.php:148
+msgid "Tournament Win Ratio:"
+msgstr "Tournament Win Ratio:"
+
+#: includes/language.php:149
+msgid "Hands Played:"
+msgstr "Hands Played:"
+
+#: includes/language.php:150
+msgid "Hands Won:"
+msgstr "Hands Won:"
+
+#: includes/language.php:151
+msgid "Hand Win Ratio:"
+msgstr "Hand Win Ratio:"
+
+#: includes/language.php:152
+msgid "Fold Ratio:"
+msgstr "Fold Ratio:"
+
+#: includes/language.php:153
+msgid "Check Ratio:"
+msgstr "Check Ratio:"
+
+#: includes/language.php:154
+msgid "Call Ratio:"
+msgstr "Call Ratio:"
+
+#: includes/language.php:155
+msgid "Raise Ratio:"
+msgstr "Raise Ratio:"
+
+#: includes/language.php:156
+msgid "All In Ratio:"
+msgstr "All In Ratio:"
+
+#: includes/language.php:157
+msgid "Fold Pre-Flop:"
+msgstr "Fold Pre-Flop:"
+
+#: includes/language.php:158
+msgid "Fold After Flop"
+msgstr "Fold After Flop"
+
+#: includes/language.php:159
+msgid "Fold After Turn:"
+msgstr "Fold After Turn:"
+
+#: includes/language.php:160
+msgid "Fold After River:"
+msgstr "Fold After River:"
+
+#: includes/language.php:161
+msgid "Old Password:"
+msgstr "Old Password:"
+
+#: includes/language.php:162
+msgid "New Password:"
+msgstr "New Password:"
+
+#: includes/language.php:163
+msgid "Confirm Password:"
+msgstr "Confirm Password:"
+
+#: includes/language.php:165
+msgid "Click here to renew your initial credit"
+msgstr "Click here to renew your initial credit"
+
+#: includes/language.php:166
+msgid "Upload"
+msgstr "Upload"
+
+#: includes/language.php:167
+msgid "Your image must be less than or equal to 2mb!"
+msgstr "Your image must be less than or equal to 2mb!"
+
+#: includes/language.php:168
+msgid "Your image must be in jpg format!"
+msgstr "Your image must be in jpg format!"
+
+#: includes/language.php:169
+msgid "Passwords can only contain letters and numbers."
+msgstr "Passwords can only contain letters and numbers."
+
+#: includes/language.php:170
+msgid "Your password must be 5-10 chars long."
+msgstr "Your password must be 5-10 chars long."
+
+#: includes/language.php:171
+msgid "Your new password and confirm fields must match."
+msgstr "Your new password and confirm fields must match."
+
+#: includes/language.php:172
+msgid "Your old password was incorrect!"
+msgstr "Your old password was incorrect!"
+
+#: includes/language.php:177
+msgid "Tables"
+msgstr "Tables"
+
+#: includes/language.php:178
+msgid "Members"
+msgstr "Members"
+
+#: includes/language.php:179 themes/bs4/strings.php:2
+msgid "Addons"
+msgstr "Addons"
+
+#: includes/language.php:180 themes/bs4/strings.php:47
+msgid "Themes"
+msgstr "Themes"
+
+#: includes/language.php:182 themes/bs4/strings.php:43
+msgid "Table Styles"
+msgstr "Table Styles"
+
+#: includes/language.php:183
+msgid "Your game settings have been updated!"
+msgstr "Your game settings have been updated!"
+
+#: includes/language.php:184
+msgid "General Settings"
+msgstr "General Settings"
+
+#: includes/language.php:185
+msgid "Browser Page Title:"
+msgstr "Browser Page Title:"
+
+#: includes/language.php:186
+msgid "Require Email Address:"
+msgstr "Require Email Address:"
+
+#: includes/language.php:187
+msgid "Approval Mode:"
+msgstr "Approval Mode:"
+
+#: includes/language.php:188
+msgid "IP Check:"
+msgstr "IP Check:"
+
+#: includes/language.php:189
+msgid "Bypass Login:"
+msgstr "Bypass Login:"
+
+#: includes/language.php:190
+msgid "Session Name:"
+msgstr "Session Name:"
+
+#: includes/language.php:191
+msgid "Auto Delete Players:"
+msgstr "Auto Delete Players:"
+
+#: includes/language.php:192
+msgid "Allow Always Fold:"
+msgstr "Allow Always Fold:"
+
+#: includes/language.php:193
+msgid "Allow Straddle:"
+msgstr "Allow Straddle:"
+
+#: includes/language.php:194
+msgid "Server Stake Size:"
+msgstr "Server Stake Size:"
+
+#: includes/language.php:195
+msgid "\"Your Broke\" Button:"
+msgstr "\"Your Broke\" Button:"
+
+#: includes/language.php:196
+msgid "Timer Settings"
+msgstr "Timer Settings"
+
+#: includes/language.php:197
+msgid "Kick Timer:"
+msgstr "Kick Timer:"
+
+#: includes/language.php:198
+msgid "Move Timer:"
+msgstr "Move Timer:"
+
+#: includes/language.php:199
+msgid "Showdown Timer:"
+msgstr "Showdown Timer:"
+
+#: includes/language.php:200
+msgid "Sit Out Timer:"
+msgstr "Sit Out Timer:"
+
+#: includes/language.php:201
+msgid "Disconnect Timer:"
+msgstr "Disconnect Timer:"
+
+#: includes/language.php:202
+msgid "Straddle Wait Timer:"
+msgstr "Straddle Wait Timer:"
+
+#: includes/language.php:203
+msgid "Raise Buttons:"
+msgstr "Raise Buttons:"
+
+#: includes/language.php:204
+msgid "5 Seconds Notification Sound:"
+msgstr "5 Seconds Notification Sound:"
+
+#: includes/language.php:205
+msgid "Allow Play Before Cards are Dealt:"
+msgstr "Allow Play Before Cards are Dealt:"
+
+#: includes/language.php:206
+msgid "This title will appear in your web browsers page title."
+msgstr "This title will appear in your web browsers page title."
+
+#: includes/language.php:207
+msgid "Select if members need to provide an email address when signing up."
+msgstr "Select if members need to provide an email address when signing up."
+
+#: includes/language.php:208
+msgid "Select automatic, email verification or admin approval."
+msgstr "Select automatic, email verification or admin approval."
+
+#: includes/language.php:209
+msgid "Prevent multiple players with identical IP addesses playing at the same table."
+msgstr "Prevent multiple players with identical IP addesses playing at the same table."
+
+#: includes/language.php:210
+msgid "Switch this on if you are using your own session based login system."
+msgstr "Switch this on if you are using your own session based login system."
+
+#: includes/language.php:211
+msgid "Your identifying session name from your own login system."
+msgstr "Your identifying session name from your own login system."
+
+#: includes/language.php:212
+msgid "Select if you want the system to delete inactive players."
+msgstr "Select if you want the system to delete inactive players."
+
+#: includes/language.php:213
+msgid "Select Yes if you want the user to be able to fold at all times."
+msgstr "Select Yes if you want the user to be able to fold at all times."
+
+#: includes/language.php:214
+msgid "Select Yes if you want the user to be able to straddle."
+msgstr "Select Yes if you want the user to be able to straddle."
+
+#: includes/language.php:215
+msgid "Switch the server stakes size from tiny stakes to high rollers ."
+msgstr "Switch the server stakes size from tiny stakes to high rollers ."
+
+#: includes/language.php:216
+msgid "\"Turn on/off \"Your Broke\" module and initial free game stake."
+msgstr "\"Turn on/off \"Your Broke\" module and initial free game stake."
+
+#: includes/language.php:217
+msgid "Controls kicking players repeatedly failing to take their turn."
+msgstr "Controls kicking players repeatedly failing to take their turn."
+
+#: includes/language.php:218
+msgid "Controls the time a player has to make their move."
+msgstr "Controls the time a player has to make their move."
+
+#: includes/language.php:219
+msgid "Controls the time a showdown hand will be displayed for."
+msgstr "Controls the time a showdown hand will be displayed for."
+
+#: includes/language.php:220
+msgid "Controls the length of stay on the sit out page."
+msgstr "Controls the length of stay on the sit out page."
+
+#: includes/language.php:221
+msgid "Controls the time before kicking disconnected players."
+msgstr "Controls the time before kicking disconnected players."
+
+#: includes/language.php:222
+msgid "Controls the time a player has to straddle or skip."
+msgstr "Controls the time a player has to straddle or skip."
+
+#: includes/language.php:223
+msgid "Raise buttons to show to user during gameplay"
+msgstr "Raise buttons to show to user during gameplay"
+
+#: includes/language.php:224
+msgid "Choose whether you want to play a notification sound when the player has 5  seconds to make a move."
+msgstr "Choose whether you want to play a notification sound when the player has 5  seconds to make a move."
+
+#: includes/language.php:225
+msgid "Choose whether to allow the player to buy in the current running game before the cards are dealt."
+msgstr "Choose whether to allow the player to buy in the current running game before the cards are dealt."
+
+#: includes/language.php:226
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: includes/language.php:227 themes/bs4/strings.php:39
+msgid "Player"
+msgstr "Player"
+
+#: includes/language.php:228 themes/bs4/strings.php:94
+msgid "Rank"
+msgstr "Rank"
+
+#: includes/language.php:229
+msgid "Email"
+msgstr "Email"
+
+#: includes/language.php:230 themes/bs4/strings.php:51
+msgid "Created"
+msgstr "Created"
+
+#: includes/language.php:231 themes/bs4/strings.php:17
+msgid "IP Address"
+msgstr "IP Address"
+
+#: includes/language.php:232
+msgid "Status"
+msgstr "Status"
+
+#: includes/language.php:233 includes/language.php:237
+msgid "Ban"
+msgstr "Ban"
+
+#: includes/language.php:234 includes/language.php:239
+#: includes/language.php:249 themes/bs4/strings.php:177
+msgid "Delete"
+msgstr "Delete"
+
+#: includes/language.php:235
+msgid "Stats"
+msgstr "Stats"
+
+#: includes/language.php:236
+msgid "Approve"
+msgstr "Approve"
+
+#: includes/language.php:238
+msgid "Unban"
+msgstr "Unban"
+
+#: includes/language.php:240
+msgid "Reset"
+msgstr "Reset"
+
+#: includes/language.php:241 themes/bs4/strings.php:28
+msgid "Create Table"
+msgstr "Create Table"
+
+#: includes/language.php:242
+msgid "Install"
+msgstr "Install"
+
+#: includes/language.php:245
+msgid "Game Style"
+msgstr "Game Style"
+
+#: includes/language.php:246
+msgid "Minimum Buyin"
+msgstr "Minimum Buyin"
+
+#: includes/language.php:247
+msgid "Maximum Buyin"
+msgstr "Maximum Buyin"
+
+#: includes/language.php:248
+msgid "Table Style"
+msgstr "Table Style"
+
+#: includes/language.php:250 themes/bs4/strings.php:53
+msgid "Options"
+msgstr "Options"
+
+#: includes/language.php:251
+msgid "Big blind"
+msgstr "Big blind"
+
+#: includes/language.php:252
+msgid "Small blind"
+msgstr "Small blind"
+
+#: includes/language.php:253 themes/bs4/strings.php:35
+msgid "Save"
+msgstr "Save"
+
+#: includes/language.php:254
+msgid "Back"
+msgstr "Back"
+
+#: includes/language.php:255
+msgid "Ticket value"
+msgstr "Ticket value"
+
+#: includes/language.php:256
+msgid "Rake value"
+msgstr "Rake value"
+
+#: includes/language.php:257
+msgid "Prize 1"
+msgstr "Prize 1"
+
+#: includes/language.php:258
+msgid "Prize 2"
+msgstr "Prize 2"
+
+#: includes/language.php:259
+msgid "Prize 3"
+msgstr "Prize 3"
+
+#: includes/language.php:260
+msgid "Start date and time"
+msgstr "Start date and time"
+
+#: includes/language.php:261
+msgid "Installed Table Styles"
+msgstr "Installed Table Styles"
+
+#: includes/language.php:262
+msgid "Style Preview"
+msgstr "Style Preview"
+
+#: includes/language.php:263
+msgid "New Style Name"
+msgstr "New Style Name"
+
+#: includes/language.php:264
+msgid "Validation Code"
+msgstr "Validation Code"
+
+#: includes/language.php:265
+msgid "This style has already been installed!"
+msgstr "This style has already been installed!"
+
+#: includes/language.php:266
+msgid "Missing data! Please try again."
+msgstr "Missing data! Please try again."
+
+#: includes/language.php:267
+msgid "Invalid style name or license code!"
+msgstr "Invalid style name or license code!"
+
+#: includes/language.php:272
+msgid "Loading..."
+msgstr "Loading..."
+
+#: includes/language.php:273
+msgid "buys in for"
+msgstr "buys in for"
+
+#: includes/language.php:274
+msgid "Your bank roll is not high enough to play on this table!"
+msgstr "Your bank roll is not high enough to play on this table!"
+
+#: includes/language.php:275
+msgid "Your bank roll is not high enough to play in this tournament!"
+msgstr "Your bank roll is not high enough to play in this tournament!"
+
+#: includes/language.php:276
+msgid "game starting..."
+msgstr "game starting..."
+
+#: includes/language.php:277
+msgid "folds"
+msgstr "folds"
+
+#: includes/language.php:278
+msgid "calls"
+msgstr "calls"
+
+#: includes/language.php:279
+msgid "checks"
+msgstr "checks"
+
+#: includes/language.php:280
+msgid "raises"
+msgstr "raises"
+
+#: includes/language.php:281
+msgid "goes all in!"
+msgstr "goes all in!"
+
+#: includes/language.php:282
+msgid "POT:"
+msgstr "POT:"
+
+#: includes/language.php:283
+msgid "won the last tournament"
+msgstr "won the last tournament"
+
+#: includes/language.php:284
+msgid "has lost connection and leaves the table"
+msgstr "has lost connection and leaves the table"
+
+#: includes/language.php:285
+msgid "has busted and leaves the table"
+msgstr "has busted and leaves the table"
+
+#: includes/language.php:286
+msgid "players joining..."
+msgstr "players joining..."
+
+#: includes/language.php:287
+msgid "Lets go!"
+msgstr "Lets go!"
+
+#: includes/language.php:288
+msgid "is chip leader"
+msgstr "is chip leader"
+
+#: includes/language.php:289
+msgid "has the dealer button"
+msgstr "has the dealer button"
+
+#: includes/language.php:290
+msgid "Dealing the holecards..."
+msgstr "Dealing the holecards..."
+
+#: includes/language.php:291
+msgid "Dealing the flop..."
+msgstr "Dealing the flop..."
+
+#: includes/language.php:292
+msgid "Dealing the turn..."
+msgstr "Dealing the turn..."
+
+#: includes/language.php:293
+msgid "SHOWDOWN!"
+msgstr "SHOWDOWN!"
+
+#: includes/language.php:294
+msgid "wins, everyone folded"
+msgstr "wins, everyone folded"
+
+#: includes/language.php:295
+msgid "is all in"
+msgstr "is all in"
+
+#: includes/language.php:296
+msgid "Dealing the river..."
+msgstr "Dealing the river..."
+
+#: includes/language.php:297
+msgid "posts small blind"
+msgstr "posts small blind"
+
+#: includes/language.php:298
+msgid "posts big blind"
+msgstr "posts big blind"
+
+#: includes/language.php:299
+msgid "split pot"
+msgstr "split pot"
+
+#: includes/language.php:300
+msgid "The pot is split between the players who have the best"
+msgstr "The pot is split between the players who have the best"
+
+#: includes/language.php:301
+msgid "Winning hand:"
+msgstr "Winning hand:"
+
+#: includes/language.php:302
+msgid "Processing..."
+msgstr "Processing..."
+
+#: includes/language.php:303 themes/bs4/strings.php:222
+msgid "Start Game"
+msgstr "Start Game"
+
+#: includes/language.php:304 themes/bs4/strings.php:159
+msgid "Call"
+msgstr "Call"
+
+#: includes/language.php:305 themes/bs4/strings.php:218
+msgid "Check"
+msgstr "Check"
+
+#: includes/language.php:306 themes/bs4/strings.php:163
+msgid "Fold"
+msgstr "Fold"
+
+#: includes/language.php:307
+msgid "Rebuy"
+msgstr "Rebuy"
+
+#: includes/language.php:308
+msgid "Straddle!"
+msgstr "Straddle!"
+
+#: includes/language.php:309 themes/bs4/strings.php:221
+msgid "Bet"
+msgstr "Bet"
+
+#: includes/language.php:310
+msgid "All In"
+msgstr "All In"
+
+#: includes/language.php:311
+msgid "pair of"
+msgstr "pair of"
+
+#: includes/language.php:312
+msgid "2 pair"
+msgstr "2 pair"
+
+#: includes/language.php:313
+msgid "full house"
+msgstr "full house"
+
+#: includes/language.php:314
+msgid "a set of"
+msgstr "a set of"
+
+#: includes/language.php:315
+msgid "all the"
+msgstr "all the"
+
+#: includes/language.php:316
+msgid "high flush"
+msgstr "high flush"
+
+#: includes/language.php:317
+msgid "straight flush"
+msgstr "straight flush"
+
+#: includes/language.php:318
+msgid "royal flush"
+msgstr "royal flush"
+
+#: includes/language.php:319
+msgid "high straight"
+msgstr "high straight"
+
+#: includes/language.php:320
+msgid "low straight"
+msgstr "low straight"
+
+#: includes/language.php:321
+msgid "highcard"
+msgstr "highcard"
+
+#: includes/language.php:322
+msgid "Small Screen"
+msgstr "Small Screen"
+
+#: includes/language.php:323
+msgid "Wide Screen"
+msgstr "Wide Screen"
+
+#: includes/language.php:324
+msgid "Texas Hold em"
+msgstr "Texas Hold em"
+
+#: includes/language.php:325
+msgid "Omaha Hold em"
+msgstr "Omaha Hold em"
+
+#: includes/language.php:326
+msgid "Money Prefix:"
+msgstr "Money Prefix:"
+
+#: includes/language.php:327
+msgid "The character that appears before the pot/bet number"
+msgstr "The character that appears before the pot/bet number"
+
+#: includes/language.php:328
+msgid "Money Decimal:"
+msgstr "Money Decimal:"
+
+#: includes/language.php:329
+msgid "The decimal character for money"
+msgstr "The decimal character for money"
+
+#: includes/language.php:330
+msgid "Money Thousand:"
+msgstr "Money Thousand:"
+
+#: includes/language.php:331
+msgid "The decimal character for each thousand iteration of money"
+msgstr "The decimal character for each thousand iteration of money"
+
+#: includes/language.php:332
+msgid "Admin Users"
+msgstr "Admin Users"
+
+#: includes/language.php:333
+msgid "Usernames of admins (separated by comma)"
+msgstr "Usernames of admins (separated by comma)"
+
+#: includes/language.php:334
+msgid "Registration Chips"
+msgstr "Registration Chips"
+
+#: includes/language.php:335
+msgid "The amount of chips a user gets after creating a new account."
+msgstr "The amount of chips a user gets after creating a new account."
+
+#: templates/header.php:28 themes/bs4/strings.php:12
+msgid "Updates"
+msgstr "Updates"
+
+#: templates/header.php:32
+msgid "Site Log"
+msgstr "Site Log"
+
+#: templates/header.php:40 themes/bs4/strings.php:91
+msgid "Logs"
+msgstr "Logs"
+
+#: themes/bs4/strings.php:3
+msgid "Install Addons"
+msgstr "Install Addons"
+
+#: themes/bs4/strings.php:4
+msgid "Upload Addon"
+msgstr "Upload Addon"
+
+#: themes/bs4/strings.php:5
+msgid "Update Selected"
+msgstr "Update Selected"
+
+#: themes/bs4/strings.php:6
+msgid "Delete Selected"
+msgstr "Delete Selected"
+
+#: themes/bs4/strings.php:7
+msgid "Name"
+msgstr "Name"
+
+#: themes/bs4/strings.php:8
+msgid "Description"
+msgstr "Description"
+
+#: themes/bs4/strings.php:9
+msgid "Author"
+msgstr "Author"
+
+#: themes/bs4/strings.php:10
+msgid "Actions"
+msgstr "Actions"
+
+#: themes/bs4/strings.php:11
+msgid "Version"
+msgstr "Version"
+
+#: themes/bs4/strings.php:14
+msgid "Edit Member"
+msgstr "Edit Member"
+
+#: themes/bs4/strings.php:15
+msgid "User Details"
+msgstr "User Details"
+
+#: themes/bs4/strings.php:16
+msgid "Username"
+msgstr "Username"
+
+#: themes/bs4/strings.php:18
+msgid "Location"
+msgstr "Location"
+
+#: themes/bs4/strings.php:19
+msgid "Last Logged In"
+msgstr "Last Logged In"
+
+#: themes/bs4/strings.php:20
+msgid "Join Date"
+msgstr "Join Date"
+
+#: themes/bs4/strings.php:21
+msgid "Games Played"
+msgstr "Games Played"
+
+#: themes/bs4/strings.php:22
+msgid "Tournaments Played"
+msgstr "Tournaments Played"
+
+#: themes/bs4/strings.php:23
+msgid "Stakesize"
+msgstr "Stakesize"
+
+#: themes/bs4/strings.php:24
+msgid "Update Profile"
+msgstr "Update Profile"
+
+#: themes/bs4/strings.php:25
+msgid "Total Chipcount"
+msgstr "Total Chipcount"
+
+#: themes/bs4/strings.php:26
+msgid "Update Chip Count"
+msgstr "Update Chip Count"
+
+#: themes/bs4/strings.php:27
+msgid "All Tables"
+msgstr "All Tables"
+
+#: themes/bs4/strings.php:29
+msgid "Basic Settings"
+msgstr "Basic Settings"
+
+#: themes/bs4/strings.php:30
+msgid "Detailed Settings"
+msgstr "Detailed Settings"
+
+#: themes/bs4/strings.php:31
+msgid "SMTP Settings"
+msgstr "SMTP Settings"
+
+#: themes/bs4/strings.php:32
+msgid "Currency Settings"
+msgstr "Currency Settings"
+
+#: themes/bs4/strings.php:33
+msgid "Language Settings"
+msgstr "Language Settings"
+
+#: themes/bs4/strings.php:34
+msgid "Default Language"
+msgstr "Default Language"
+
+#: themes/bs4/strings.php:36
+msgid "How-To-Translate DIY Guide"
+msgstr "How-To-Translate DIY Guide"
+
+#: themes/bs4/strings.php:37
+msgid "Generate Strings"
+msgstr "Generate Strings"
+
+#: themes/bs4/strings.php:38
+msgid "You must enter a session variable!!"
+msgstr "You must enter a session variable!!"
+
+#: themes/bs4/strings.php:40
+msgid "Filter"
+msgstr "Filter"
+
+#: themes/bs4/strings.php:41
+msgid "Report"
+msgstr "Report"
+
+#: themes/bs4/strings.php:42
+msgid "Time"
+msgstr "Time"
+
+#: themes/bs4/strings.php:44
+msgid "Install Table Style"
+msgstr "Install Table Style"
+
+#: themes/bs4/strings.php:45
+msgid "Table Template File"
+msgstr "Table Template File"
+
+#: themes/bs4/strings.php:46
+msgid "New style has been added!"
+msgstr "New style has been added!"
+
+#: themes/bs4/strings.php:48
+msgid "Install Theme"
+msgstr "Install Theme"
+
+#: themes/bs4/strings.php:49
+msgid "Backups"
+msgstr "Backups"
+
+#: themes/bs4/strings.php:50
+msgid "Create"
+msgstr "Create"
+
+#: themes/bs4/strings.php:52
+msgid "Size"
+msgstr "Size"
+
+#: themes/bs4/strings.php:54
+msgid "Current version"
+msgstr "Current version"
+
+#: themes/bs4/strings.php:55
+msgid "An update is available!"
+msgstr "An update is available!"
+
+#: themes/bs4/strings.php:56
+msgid "Make sure to keep a backup of your current files before you proceed to update."
+msgstr "Make sure to keep a backup of your current files before you proceed to update."
+
+#: themes/bs4/strings.php:57
+msgid "Perform Update"
+msgstr "Perform Update"
+
+#: themes/bs4/strings.php:58
+msgid "Starting update..."
+msgstr "Starting update..."
+
+#: themes/bs4/strings.php:59
+msgid "Update Info"
+msgstr "Update Info"
+
+#: themes/bs4/strings.php:60
+msgid "Close"
+msgstr "Close"
+
+#: themes/bs4/strings.php:61
+msgid "Confirm and Proceed"
+msgstr "Confirm and Proceed"
+
+#: themes/bs4/strings.php:62
+msgid "Downloading update"
+msgstr "Downloading update"
+
+#: themes/bs4/strings.php:63
+msgid "Downloading failed!"
+msgstr "Downloading failed!"
+
+#: themes/bs4/strings.php:64
+msgid "Extracting update"
+msgstr "Extracting update"
+
+#: themes/bs4/strings.php:65
+msgid "Extraction complete!"
+msgstr "Extraction complete!"
+
+#: themes/bs4/strings.php:66
+msgid "Go to Homepage"
+msgstr "Go to Homepage"
+
+#: themes/bs4/strings.php:67
+msgid "Extraction failed!"
+msgstr "Extraction failed!"
+
+#: themes/bs4/strings.php:68
+msgid "No new update is available right now."
+msgstr "No new update is available right now."
+
+#: themes/bs4/strings.php:69
+msgid "How do I change my avatar?"
+msgstr "How do I change my avatar?"
+
+#: themes/bs4/strings.php:70
+msgid "In the main lobby screen click the edit character link to change your avatar or upload a custom avatar. Custom avatars must be in jpg image format and less than 250kb in size."
+msgstr "In the main lobby screen click the edit character link to change your avatar or upload a custom avatar. Custom avatars must be in jpg image format and less than 250kb in size."
+
+#: themes/bs4/strings.php:71
+msgid "What is the Move Timer?"
+msgstr "What is the Move Timer?"
+
+#: themes/bs4/strings.php:72
+msgid "The move timer ensures that smooth table play continues by auto folding or dealing hands if a player does not take their turn within the time limit set by the site administrator. If a player repeatedly fails to take their turn they will be kicked off the table and any money left in their pot will be added back on to their total bankroll."
+msgstr "The move timer ensures that smooth table play continues by auto folding or dealing hands if a player does not take their turn within the time limit set by the site administrator. If a player repeatedly fails to take their turn they will be kicked off the table and any money left in their pot will be added back on to their total bankroll."
+
+#: themes/bs4/strings.php:73
+msgid "Why did I get kicked from a game?"
+msgstr "Why did I get kicked from a game?"
+
+#: themes/bs4/strings.php:74
+msgid "Players are automatically kicked if they repeadedly fail to take their turn and the game has to auto move them or if they lose connection from the table for more than the allowed time. The lengths of time are variable as they are set by the site administrator."
+msgstr "Players are automatically kicked if they repeadedly fail to take their turn and the game has to auto move them or if they lose connection from the table for more than the allowed time. The lengths of time are variable as they are set by the site administrator."
+
+#: themes/bs4/strings.php:75
+msgid "My player is broke, what now?"
+msgstr "My player is broke, what now?"
+
+#: themes/bs4/strings.php:76
+msgid "If the site administrator has enabled the option, you can renew your initial game credits by clicking the renew button on your My Player page."
+msgstr "If the site administrator has enabled the option, you can renew your initial game credits by clicking the renew button on your My Player page."
+
+#: themes/bs4/strings.php:77
+msgid "How can I get my own copy of Online Poker Script v2?"
+msgstr "How can I get my own copy of Online Poker Script v2?"
+
+#: themes/bs4/strings.php:78
+msgid "Online Poker Script V2 can be purchased in two ways. You can hire your own poker table for a small annual fee or purchase the full package to install on your own website. For information about Online Poker Script V2, please visit our website:"
+msgstr "Online Poker Script V2 can be purchased in two ways. You can hire your own poker table for a small annual fee or purchase the full package to install on your own website. For information about Online Poker Script V2, please visit our website:"
+
+#: themes/bs4/strings.php:79
+msgid "Reset Password"
+msgstr "Reset Password"
+
+#: themes/bs4/strings.php:80
+msgid "Reset your Password"
+msgstr "Reset your Password"
+
+#: themes/bs4/strings.php:81
+msgid "Email Address"
+msgstr "Email Address"
+
+#: themes/bs4/strings.php:83
+msgid "Cancel"
+msgstr "Cancel"
+
+#: themes/bs4/strings.php:84
+msgid "Your Username"
+msgstr "Your Username"
+
+#: themes/bs4/strings.php:86
+msgid "Table"
+msgstr "Table"
+
+#: themes/bs4/strings.php:87
+msgid "Type"
+msgstr "Type"
+
+#: themes/bs4/strings.php:88
+msgid "Blinds"
+msgstr "Blinds"
+
+#: themes/bs4/strings.php:89
+msgid "Chat"
+msgstr "Chat"
+
+#: themes/bs4/strings.php:90
+msgid "Hide Cards"
+msgstr "Hide Cards"
+
+#: themes/bs4/strings.php:92
+msgid "Write message"
+msgstr "Write message"
+
+#: themes/bs4/strings.php:93
+msgid "Show Cards"
+msgstr "Show Cards"
+
+#: themes/bs4/strings.php:95
+msgid "User"
+msgstr "User"
+
+#: themes/bs4/strings.php:96
+msgid "Chips"
+msgstr "Chips"
+
+#: themes/bs4/strings.php:97
+msgid "Hands Played"
+msgstr "Hands Played"
+
+#: themes/bs4/strings.php:98
+msgid "Hands Won"
+msgstr "Hands Won"
+
+#: themes/bs4/strings.php:99
+msgid "Hands Called"
+msgstr "Hands Called"
+
+#: themes/bs4/strings.php:100
+msgid "Hands Checked"
+msgstr "Hands Checked"
+
+#: themes/bs4/strings.php:101
+msgid "Tournaments Won"
+msgstr "Tournaments Won"
+
+#: themes/bs4/strings.php:102
+msgid "The object of Texas Holdem is to make the best 5 card poker hand from the 5 community cards on the table and your own 2 cards that only you can see. The community cards are dealt out during the hand with betting rounds in between so you are betting on the likleyhood of forming a winning hand by the end of the hand when all cards are revealed."
+msgstr "The object of Texas Holdem is to make the best 5 card poker hand from the 5 community cards on the table and your own 2 cards that only you can see. The community cards are dealt out during the hand with betting rounds in between so you are betting on the likleyhood of forming a winning hand by the end of the hand when all cards are revealed."
+
+#: themes/bs4/strings.php:103
+msgid "A game consists of playing hands of cards and each hand is split into alternating rounds of revealing cards and betting on the results."
+msgstr "A game consists of playing hands of cards and each hand is split into alternating rounds of revealing cards and betting on the results."
+
+#: themes/bs4/strings.php:104
+msgid "Your good buddy has lent you $10K to join a high stakes poker game. Whatever profit or loss you make whilst playing in a game will be added or deducted from your total bankroll whenever you leave a table. The total bankroll determines your player ranking."
+msgstr "Your good buddy has lent you $10K to join a high stakes poker game. Whatever profit or loss you make whilst playing in a game will be added or deducted from your total bankroll whenever you leave a table. The total bankroll determines your player ranking."
+
+#: themes/bs4/strings.php:105
+msgid "Be careful not to lose the initial $10K or it's back to your buddy to plead for more!"
+msgstr "Be careful not to lose the initial $10K or it's back to your buddy to plead for more!"
+
+#: themes/bs4/strings.php:106
+msgid "Royal Flush"
+msgstr "Royal Flush"
+
+#: themes/bs4/strings.php:107
+msgid "The highest possible poker hand is the Royal Flush. It consists of a Ten, Jack, Queen, King and Ace, all of the same suit."
+msgstr "The highest possible poker hand is the Royal Flush. It consists of a Ten, Jack, Queen, King and Ace, all of the same suit."
+
+#: themes/bs4/strings.php:108
+msgid "Straight Flush"
+msgstr "Straight Flush"
+
+#: themes/bs4/strings.php:109
+msgid "A combination of both a straight and a flush. The cards must all be of the same suit and they must run in value e.g. 4,5,6,7,8. If more than one player has a Straight Flush, the player with the best Highcard wins."
+msgstr "A combination of both a straight and a flush. The cards must all be of the same suit and they must run in value e.g. 4,5,6,7,8. If more than one player has a Straight Flush, the player with the best Highcard wins."
+
+#: themes/bs4/strings.php:110
+msgid "Four Of A Kind"
+msgstr "Four Of A Kind"
+
+#: themes/bs4/strings.php:111
+msgid "This hand is made up with 4 cards of the same value (e.g. 4 X Jacks). If more than one player has Four Of A Kind the highest value Four Of A Kind would win."
+msgstr "This hand is made up with 4 cards of the same value (e.g. 4 X Jacks). If more than one player has Four Of A Kind the highest value Four Of A Kind would win."
+
+#: themes/bs4/strings.php:112
+msgid "Full House"
+msgstr "Full House"
+
+#: themes/bs4/strings.php:113
+msgid "This hand is made up with 3 cards of one value and two of another value e.g. 3 X Nines and 2 X Queens. If more than one player has a Full House the winning hand would be the one with the highest triple value or failing that the highest double value."
+msgstr "This hand is made up with 3 cards of one value and two of another value e.g. 3 X Nines and 2 X Queens. If more than one player has a Full House the winning hand would be the one with the highest triple value or failing that the highest double value."
+
+#: themes/bs4/strings.php:114
+msgid "Flush"
+msgstr "Flush"
+
+#: themes/bs4/strings.php:115
+msgid "A Flush is when the hand contains 5 cards of the same suit e.g. 5 X Spades. If more than one player has a Flush the winner is the player with the best Highcard."
+msgstr "A Flush is when the hand contains 5 cards of the same suit e.g. 5 X Spades. If more than one player has a Flush the winner is the player with the best Highcard."
+
+#: themes/bs4/strings.php:116
+msgid "Straight"
+msgstr "Straight"
+
+#: themes/bs4/strings.php:117
+msgid "To make a Straight the must run in value e.g. 4,5,6,7,8 but it does not matter what suit they are. If more than one player has a Straight , the player with the best Highcard wins."
+msgstr "To make a Straight the must run in value e.g. 4,5,6,7,8 but it does not matter what suit they are. If more than one player has a Straight , the player with the best Highcard wins."
+
+#: themes/bs4/strings.php:118
+msgid "Three Of A Kind"
+msgstr "Three Of A Kind"
+
+#: themes/bs4/strings.php:119
+msgid "This hand is made up with 3 cards of the same value e.g. 3 X Sevens. If more than one player has a Three Of A Kind the winning hand would be the one with the highest value Three Of A Kind."
+msgstr "This hand is made up with 3 cards of the same value e.g. 3 X Sevens. If more than one player has a Three Of A Kind the winning hand would be the one with the highest value Three Of A Kind."
+
+#: themes/bs4/strings.php:120
+msgid "Two Pair"
+msgstr "Two Pair"
+
+#: themes/bs4/strings.php:121
+msgid "Two pair of the same value e.g. 2 X Fours and 2 X Sevens. If more than one player has Two Pair, the winner is the player with the highest pair value. If both players have the same pairs the player with the best Highcard wins."
+msgstr "Two pair of the same value e.g. 2 X Fours and 2 X Sevens. If more than one player has Two Pair, the winner is the player with the highest pair value. If both players have the same pairs the player with the best Highcard wins."
+
+#: themes/bs4/strings.php:122
+msgid "One Pair"
+msgstr "One Pair"
+
+#: themes/bs4/strings.php:123
+msgid "One pair of the same value e.g. 2 X Fours. If more than one player has One Pair, the winner is the player with the highest pair value. If both players have the same pair the player with the best Highcard win."
+msgstr "One pair of the same value e.g. 2 X Fours. If more than one player has One Pair, the winner is the player with the highest pair value. If both players have the same pair the player with the best Highcard win."
+
+#: themes/bs4/strings.php:124
+msgid "Highcard"
+msgstr "Highcard"
+
+#: themes/bs4/strings.php:125
+msgid "The Highcard is the highest value card that is in your hand that is not duplicated not a pair, 3 of a kind or 4 of a kind. If one or more players has the same Highcard the next highest Highcard will be evaluated until a winner is found."
+msgstr "The Highcard is the highest value card that is in your hand that is not duplicated not a pair, 3 of a kind or 4 of a kind. If one or more players has the same Highcard the next highest Highcard will be evaluated until a winner is found."
+
+#: themes/bs4/strings.php:126
+msgid "Game Play"
+msgstr "Game Play"
+
+#: themes/bs4/strings.php:127
+msgid "1. The hand begins."
+msgstr "1. The hand begins."
+
+#: themes/bs4/strings.php:128
+msgid "2. The next player from the dealer button posts the small blind."
+msgstr "2. The next player from the dealer button posts the small blind."
+
+#: themes/bs4/strings.php:129
+msgid "3. The next player posts the big blind."
+msgstr "3. The next player posts the big blind."
+
+#: themes/bs4/strings.php:130
+msgid "4. Each player is dealt their personal hand 2 cards each. These are called the players hole cards."
+msgstr "4. Each player is dealt their personal hand 2 cards each. These are called the players hole cards."
+
+#: themes/bs4/strings.php:131
+msgid "5. Betting round 1 commences pre-flop."
+msgstr "5. Betting round 1 commences pre-flop."
+
+#: themes/bs4/strings.php:132
+msgid "6. The first 3 community cards are dealt out. This is called the Flop."
+msgstr "6. The first 3 community cards are dealt out. This is called the Flop."
+
+#: themes/bs4/strings.php:133
+msgid "7. Betting round 2 commences."
+msgstr "7. Betting round 2 commences."
+
+#: themes/bs4/strings.php:134
+msgid "8. The 4th community card is dealt out. This is called the Turn card."
+msgstr "8. The 4th community card is dealt out. This is called the Turn card."
+
+#: themes/bs4/strings.php:135
+msgid "9. Betting round 3 commences."
+msgstr "9. Betting round 3 commences."
+
+#: themes/bs4/strings.php:136
+msgid "10. The 5th and last community card is dealt. This is called the River card."
+msgstr "10. The 5th and last community card is dealt. This is called the River card."
+
+#: themes/bs4/strings.php:137
+msgid "11. Last betting round commences."
+msgstr "11. Last betting round commences."
+
+#: themes/bs4/strings.php:138
+msgid "12. The cards of the remaining players that have not folded are turned over to find the winner."
+msgstr "12. The cards of the remaining players that have not folded are turned over to find the winner."
+
+#: themes/bs4/strings.php:139
+msgid "13. The winnings are distributed**. If more than one player wins the pot is split."
+msgstr "13. The winnings are distributed**. If more than one player wins the pot is split."
+
+#: themes/bs4/strings.php:140
+msgid "14. If more than one player still has money in their pot, a new hand begins."
+msgstr "14. If more than one player still has money in their pot, a new hand begins."
+
+#: themes/bs4/strings.php:141
+msgid "Note: You cannot win more than the amount you bet from another player."
+msgstr "Note: You cannot win more than the amount you bet from another player."
+
+#: themes/bs4/strings.php:142
+msgid "Terms"
+msgstr "Terms"
+
+#: themes/bs4/strings.php:143
+msgid "Dealer Button"
+msgstr "Dealer Button"
+
+#: themes/bs4/strings.php:144
+msgid "A chip that marks where the dealing begins. This moves forward one player each hand."
+msgstr "A chip that marks where the dealing begins. This moves forward one player each hand."
+
+#: themes/bs4/strings.php:145
+msgid "Small Blind"
+msgstr "Small Blind"
+
+#: themes/bs4/strings.php:146
+msgid "An automatic small bet that must be paid by the next player from the dealer button at the beginning of a hand."
+msgstr "An automatic small bet that must be paid by the next player from the dealer button at the beginning of a hand."
+
+#: themes/bs4/strings.php:147
+msgid "Big Blind"
+msgstr "Big Blind"
+
+#: themes/bs4/strings.php:148
+msgid "An automatic large bet that must be paid by the next player from the small blind player at the beginning of a hand. During the first betting round this is the amount players must match or raise to stay in the current hand."
+msgstr "An automatic large bet that must be paid by the next player from the small blind player at the beginning of a hand. During the first betting round this is the amount players must match or raise to stay in the current hand."
+
+#: themes/bs4/strings.php:149
+msgid "Hole Cards"
+msgstr "Hole Cards"
+
+#: themes/bs4/strings.php:150
+msgid "The 2 cards that you are dealt as your personal hand. Other players cannot see your cards unless they turn over at the end of the hand to find the winner."
+msgstr "The 2 cards that you are dealt as your personal hand. Other players cannot see your cards unless they turn over at the end of the hand to find the winner."
+
+#: themes/bs4/strings.php:151
+msgid "Betting Round"
+msgstr "Betting Round"
+
+#: themes/bs4/strings.php:152
+msgid "There are 4 betting rounds during a game. A player can choose to call a bet, raise a bet or fold their hand."
+msgstr "There are 4 betting rounds during a game. A player can choose to call a bet, raise a bet or fold their hand."
+
+#: themes/bs4/strings.php:153
+msgid "Flop"
+msgstr "Flop"
+
+#: themes/bs4/strings.php:154
+msgid "The first 3 community cards dealt out during the hand after the first betting round."
+msgstr "The first 3 community cards dealt out during the hand after the first betting round."
+
+#: themes/bs4/strings.php:155
+msgid "Turn"
+msgstr "Turn"
+
+#: themes/bs4/strings.php:156
+msgid "The 4th community card dealt out after the second betting round."
+msgstr "The 4th community card dealt out after the second betting round."
+
+#: themes/bs4/strings.php:157
+msgid "River"
+msgstr "River"
+
+#: themes/bs4/strings.php:158
+msgid "The 5th community card dealt out after the third betting round."
+msgstr "The 5th community card dealt out after the third betting round."
+
+#: themes/bs4/strings.php:160
+msgid "Match the current bet amount."
+msgstr "Match the current bet amount."
+
+#: themes/bs4/strings.php:161
+msgid "Raise"
+msgstr "Raise"
+
+#: themes/bs4/strings.php:162
+msgid "Raise the current bet amount."
+msgstr "Raise the current bet amount."
+
+#: themes/bs4/strings.php:164
+msgid "Discard your current hand and lose any money you have bet so far in this hand."
+msgstr "Discard your current hand and lose any money you have bet so far in this hand."
+
+#: themes/bs4/strings.php:165
+msgid "Allin"
+msgstr "Allin"
+
+#: themes/bs4/strings.php:166
+msgid "Bet your entire pot on the hand."
+msgstr "Bet your entire pot on the hand."
+
+#: themes/bs4/strings.php:167
+msgid "13. The winnings are distributed. If more than one player wins the pot is split."
+msgstr "13. The winnings are distributed. If more than one player wins the pot is split."
+
+#: themes/bs4/strings.php:168
+msgid "Please Wait"
+msgstr "Please Wait"
+
+#: themes/bs4/strings.php:169
+msgid "Activate"
+msgstr "Activate"
+
+#: themes/bs4/strings.php:170
+msgid "Deactivate"
+msgstr "Deactivate"
+
+#: themes/bs4/strings.php:171
+msgid "Installed"
+msgstr "Installed"
+
+#: themes/bs4/strings.php:172
+msgid "Install Now"
+msgstr "Install Now"
+
+#: themes/bs4/strings.php:174
+msgid "Update"
+msgstr "Update"
+
+#: themes/bs4/strings.php:175
+msgid "Addon Zip File:"
+msgstr "Addon Zip File:"
+
+#: themes/bs4/strings.php:176
+msgid "Download"
+msgstr "Download"
+
+#: themes/bs4/strings.php:178
+msgid "No backups found."
+msgstr "No backups found."
+
+#: themes/bs4/strings.php:179
+msgid "Username:"
+msgstr "Username:"
+
+#: themes/bs4/strings.php:180
+msgid "Email:"
+msgstr "Email:"
+
+#: themes/bs4/strings.php:181
+msgid "IP:"
+msgstr "IP:"
+
+#: themes/bs4/strings.php:182
+msgid "Table Animations"
+msgstr "Table Animations"
+
+#: themes/bs4/strings.php:183
+msgid "Allow Straddle"
+msgstr "Allow Straddle"
+
+#: themes/bs4/strings.php:184
+msgid "Active"
+msgstr "Active"
+
+#: themes/bs4/strings.php:185
+msgid "Edit"
+msgstr "Edit"
+
+#: themes/bs4/strings.php:186
+msgid "Search for members using name or email"
+msgstr "Search for members using name or email"
+
+#: themes/bs4/strings.php:187
+msgid "Search"
+msgstr "Search"
+
+#: themes/bs4/strings.php:188
+msgid "Note: If Email Approval is set, an Email Address is required."
+msgstr "Note: If Email Approval is set, an Email Address is required."
+
+#: themes/bs4/strings.php:189
+msgid "Use with caution, this could lock you out of your system if used incorrectly."
+msgstr "Use with caution, this could lock you out of your system if used incorrectly."
+
+#: themes/bs4/strings.php:190
+msgid "Use SMTP"
+msgstr "Use SMTP"
+
+#: themes/bs4/strings.php:193
+msgid "SMTP Host"
+msgstr "SMTP Host"
+
+#: themes/bs4/strings.php:194
+msgid "SMTP Port"
+msgstr "SMTP Port"
+
+#: themes/bs4/strings.php:195
+msgid "Encryption"
+msgstr "Encryption"
+
+#: themes/bs4/strings.php:197
+msgid "SSL"
+msgstr "SSL"
+
+#: themes/bs4/strings.php:198
+msgid "TLS"
+msgstr "TLS"
+
+#: themes/bs4/strings.php:199
+msgid "TLS is not the same as STARTTLS. For most servers SSL is the recommended option."
+msgstr "TLS is not the same as STARTTLS. For most servers SSL is the recommended option."
+
+#: themes/bs4/strings.php:200
+msgid "Authentication"
+msgstr "Authentication"
+
+#: themes/bs4/strings.php:201
+msgid "SMTP Username"
+msgstr "SMTP Username"
+
+#: themes/bs4/strings.php:202
+msgid "SMTP Password"
+msgstr "SMTP Password"
+
+#: themes/bs4/strings.php:203
+msgid "Table Name:"
+msgstr "Table Name:"
+
+#: themes/bs4/strings.php:204
+msgid "Table Type:"
+msgstr "Table Type:"
+
+#: themes/bs4/strings.php:205
+msgid "Game Style:"
+msgstr "Game Style:"
+
+#: themes/bs4/strings.php:206
+msgid "Min. Buyin:"
+msgstr "Min. Buyin:"
+
+#: themes/bs4/strings.php:207
+msgid "Max. Buyin:"
+msgstr "Max. Buyin:"
+
+#: themes/bs4/strings.php:208
+msgid "Small Blind:"
+msgstr "Small Blind:"
+
+#: themes/bs4/strings.php:209
+msgid "Big Blind:"
+msgstr "Big Blind:"
+
+#: themes/bs4/strings.php:210
+msgid "Style:"
+msgstr "Style:"
+
+#: themes/bs4/strings.php:211
+msgid "Activated"
+msgstr "Activated"
+
+#: themes/bs4/strings.php:212
+msgid "Theme Zip File:"
+msgstr "Theme Zip File:"
+
+#: themes/bs4/strings.php:213
+msgid "Warning: these files will be updated. If you have made any changes to any of these files, you will lose your customizations."
+msgstr "Warning: these files will be updated. If you have made any changes to any of these files, you will lose your customizations."
+
+#: themes/bs4/strings.php:214
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+#: themes/bs4/strings.php:215
+msgid "Welcome to"
+msgstr "Welcome to"
+
+#: themes/bs4/strings.php:216
+msgid "Reveal cards on Showdown"
+msgstr "Reveal cards on Showdown"
+
+#: themes/bs4/strings.php:217
+msgid "Choose whether you would like to show your cards to other players during showdown."
+msgstr "Choose whether you would like to show your cards to other players during showdown."
+
+#: themes/bs4/strings.php:219
+msgid "Check/Fold"
+msgstr "Check/Fold"
+
+#: themes/bs4/strings.php:220
+msgid "Check/Call"
+msgstr "Check/Call"
+
+#: themes/bs4/strings.php:223
+msgid "Seat"
+msgstr "Seat"

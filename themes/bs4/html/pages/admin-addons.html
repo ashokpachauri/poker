@@ -1,0 +1,123 @@
+<style>
+.in-addon-each {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+.in-addon-name {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.in-addon-descr {
+  color: #666;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 4.5em;
+  line-height: 1.4em;
+}
+.in-addon-version {
+  font-size: 13px;
+  color: #444;
+}
+</style>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="nav-item">
+		<a class="nav-link active" href="#alladdons" aria-controls="home" role="tab" data-toggle="tab">{__(Addons)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#installs" aria-controls="installs" role="tab" data-toggle="tab">{__(Install Addons)}</a>
+	</li>
+
+	<li role="presentation" class="nav-item">
+		<a class="nav-link" href="#uploadaddon" aria-controls="profile" role="tab" data-toggle="tab">{__(Upload Addon)}</a>
+	</li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="alladdons">
+		<div class="mt-3 mb-3">
+			<button class="update-selected btn btn-sm btn-success mr-2">{__(Update Selected)}</button>
+			<button class="delete-selected btn btn-sm btn-danger">{__(Delete Selected)}</button>
+		</div>
+
+		<table class="table table-hover" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<th>
+					<input type="checkbox">
+				</th>
+				<th>{__(Name)}</th>
+				<th>{__(Description)}</th>
+				<th>{__(Author)}</th>
+				<th>{__(Actions)}</th>
+				<th>{__(Version)}</th>
+				<th>{__(Updates)}</th>
+			</thead>
+			<tbody>
+				{$rows <!-- html/parts/admin-addon-row-each.html -->}
+			</tbody>
+		</table>
+
+		<div>
+			<button class="update-selected btn btn-sm btn-success mr-2">{__(Update Selected)}</button>
+			<button class="delete-selected btn btn-sm btn-danger">{__(Delete Selected)}</button>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="installs">
+		<div class="panel-body">
+			<div class="row gutters mt-2">
+				{$installs <!-- html/parts/admin-addon-install-each.html -->}
+			</div>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane" id="uploadaddon">
+		<div class="panel-body">{$upload <!-- html/parts/admin-addon-upload.html -->}</div>
+	</div>
+</div>
+<script>
+    jQuery('.update-selected').on('click', function()
+    {
+        var updAddons = [];
+        jQuery('.addon-checked:checked').each(function()
+        {
+            updAddons.push( jQuery(this).val() );
+        });
+
+        jQuery.ajax({
+            url: '?',
+            method: 'POST',
+            data: {
+                update_addons: updAddons
+            },
+            complete: function()
+            {
+                window.location.reload();
+            }
+        });
+    });
+    jQuery('.delete-selected').on('click', function()
+    {
+        var delAddons = [];
+        jQuery('.addon-checked:checked').each(function()
+        {
+            delAddons.push( jQuery(this).val() );
+        });
+
+        jQuery.ajax({
+            url: '?admin=addons',
+            method: 'POST',
+            data: {
+                delete_addons: delAddons
+            },
+            complete: function()
+            {
+                window.location.reload();
+            }
+        });
+    });
+</script>

@@ -1,0 +1,34 @@
+<form class="row" method="get" action="admin.php">
+	<input type="hidden" name="admin" value="sitelog">
+	
+	<div class="col-md-3">
+		<select class="form-control" name="player">
+			<option value="">{__(Player)}:</option>
+			{$options.players}
+		</select>
+
+		<script type="text/javascript">
+			var player = "{$get.player}";
+			if (player !== "")
+			{
+				jQuery("select[name='player']").val(player);
+			}
+		</script>
+	</div>
+
+	<div class="col-md-3">
+		<button class="btn btn-primary"><i class="fas fa-filter"></i> {__(Filter)}</button>
+	</div>
+</form><br>
+
+<table class="table table-hover" border="0" cellspacing="0" cellpadding="0">
+    <thead>
+        <th>{__(Report)}</th>
+        <th>{__(Time)}</th>
+    </thead>
+
+	<tbody>
+		{$logs <!-- html/parts/admin-sitelog-each.html -->}
+	</tbody>
+</table>
+{$pagination}

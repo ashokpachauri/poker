@@ -1,0 +1,183 @@
+<div class="main-wrapper">
+
+    <a id="leaveButton" href="lobby.php" class="poker__to-lobby" style="z-index: 1;">
+        <span class="icon-lobby_icon"></span>
+        <span>{__(Lobby)}</span>
+    </a>
+
+    <div class="poker__wrapper">
+
+        <!-- poker__head START -->
+        <div class="poker__head">
+            <h1>{__(Table)} {$table.name} #{$table.id}</h1>
+            <h2>{__(Type)}: {$table.type}</h2>
+            <h2>{__(Blinds)}: {$table.blinds}</h2>
+        </div>
+        <!-- poker__head END -->
+
+        <!-- poker__main START -->
+        <div class="poker__table">
+            <div class="poker__table-img">
+                <img class="poker__table-img-desc" src="images/tablelayout/{$tablestyle}.png" alt="table">
+                <img class="poker__table-img-mob" src="images/tablelayout/{$tablestyle}_mob.png" alt="table">
+            </div>
+
+            <div class="poker__table-pot">
+                <div class="poker__table-pot-chips">
+                    <img src="{$theme.url}/images/stavka_yellow_50.svg" alt="yel">
+                    <img src="{$theme.url}/images/stavka_red_5.svg" alt="yel">
+                    <img src="{$theme.url}/images/stavka_black_100.svg" alt="yel">
+                    <img src="{$theme.url}/images/stavka_yellow_50.svg" alt="yel">
+                </div>
+                <div id="tablelog">{$table.log}</div>
+                <div id="tablepot" class="poker__table-pot-summ">0</div>
+            </div>
+            <div class="poker__table-cards">
+                <div id="card1">{$card1}</div>
+                <div id="card2">{$card2}</div>
+                <div id="card3">{$card3}</div>
+                <div id="card4">{$card4}</div>
+                <div id="card5">{$card5}</div>
+            </div>
+
+            <div class="poker__users">
+                {$players <!-- html/parts/poker-player-each.html -->}
+            </div>
+
+        </div>
+        <!-- poker__main END -->
+
+        <!-- poker__bottom START -->
+        <div class="poker__bottom">
+
+            <div class="poker__bottom-left">
+                <button class="poker-btn poker__chat-btn">{__(Chat)}</button>
+                <div id="startButton">
+                    <button class="poker-btn poker__start-btn" onclick="push_action('start');">{__(Start Game)}</button>
+                </div>
+                <div id="showHideButton">
+                    <button class="poker-btn poker__hidecards-btn">{__(Hide Cards)}</button>
+                </div>
+                <div id="showRebuyButton"></div>
+            </div>
+
+            <div id="buttonContainer">
+                <div id="checkboxes" class="poker__bottom-right">
+                    {$checkboxes <!-- html/parts/poker-button-checkboxes.html -->}
+                </div>
+
+                <div id="buttons" class="poker__bottom-right">
+                    {$buttons <!-- html/parts/poker-button-*.html -->}
+                </div>
+            </div>
+
+            <!-- CHAT POPUP START -->
+            <div class="poker__chat">
+
+                <div class="poker__chat-head">
+                    <div class="poker__chat-head-tab" data-tabname="chat">
+                        <span class="icon-chat_icon">
+                            <span class="path1"></span>
+                            <div class="icon-chat_icon__circle"></div>
+                        </span>
+                        <span class="text">{__(Chat)}</span>
+                    </div>
+                    <div class="poker__chat-head-tab" data-tabname="logs">
+                        <span class="icon-logs_icon"></span>
+                        <span class="text">{__(Logs)}</span>
+                    </div>
+                    <div class="poker__chat-head-close"></div>
+                </div>
+
+                <div class="poker__chat-content">
+                    <div class="poker__chat-content-tab" data-tabcontent="chat">
+                        <div id="userchatdiv" class="poker__chat-messages">
+                            {$userchat}
+                        </div>
+
+                        <form class="poker__chat-write" onsubmit="pushChat(event);">
+                            <input class="write-input" type="text" placeholder="{__(Write message)}">
+                            <button type="submit">
+                                <span class="icon-send_icon"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- chat tab end -->
+
+                    <div class="poker__chat-content-tab" data-tabcontent="logs">
+                        <div id="chatdiv" class="poker__chat-logs">
+                            {$dealerchat}
+                        </div>
+                    </div>
+                    <!-- logs tab end -->
+                </div>
+                <!-- poker__chat-content -->
+            </div>
+            <!-- CHAT POPUP END -->
+
+        </div>
+        <!-- poker__bottom END -->
+
+    </div>
+
+    <div style="display:none;">
+        <form name="checkmov">
+            <input type="hidden" name="lastmove" id="lastmove">
+            <input type="hidden" name="tomove" id="tomove">
+            <input type="hidden" name="hand" id="hand">
+        </form>
+        <div class="tiny">
+            <div id="bankroll"></div>
+        </div>
+        <div id="flashObject"></div>
+        <div id="chatSounds">
+            <audio id="aud-card" preload>
+                <source src="{$sound.card}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-chat" preload>
+                <source src="{$sound.chat}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-check" preload>
+                <source src="{$sound.check}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-chips" preload>
+                <source src="{$sound.chips}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-deal" preload>
+                <source src="{$sound.deal}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-flop" preload>
+                <source src="{$sound.flop}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-fold" preload>
+                <source src="{$sound.fold}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-shuffle" preload>
+                <source src="{$sound.shuffle}" type="audio/mpeg">
+            </audio>
+            <audio id="aud-timerleft" preload>
+                <source src="{$sound.timerleft}" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="chatdiv"></div>
+        <div id="userchatdiv"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).on("keyup", function (e) {
+        if (e.code === 'KeyF' && jQuery("button[data-poker-btn='fold']").length == 1)
+            push_action('fold');
+        else if (e.code === 'KeyC' && jQuery("button[data-poker-btn='call']").length == 1)
+            push_action('call');
+        else if (e.code === 'KeyC' && jQuery("button[data-poker-btn='check']").length == 1)
+            push_action('check');
+    });
+</script>
+<script type="text/javascript">
+    jQuery(document).on("click", ".poker__hidecards-btn", function (e) {
+        push_action("hide-my-cards");
+    });
+    jQuery(document).on("click", ".poker__showcards-btn", function (e) {
+        push_action("show-my-cards");
+    });
+</script>

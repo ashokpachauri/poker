@@ -1,0 +1,31 @@
+<form class="pt-2" method="GET" action="admin.php">
+    <input type="hidden" name="admin" value="members">
+    <div class="row">
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="q" placeholder="{__(Search for members using name or email)}">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary">{__(Search)}</button>
+        </div>
+    </div>
+</form>
+<table class="table table-hover" border="0" cellspacing="0" cellpadding="0">
+    <thead> 
+        <th>{$lang.admin_members_name}</th>
+        <th>{$lang.admin_members_rank}</th>
+        <th>{$lang.admin_members_created}</th>
+        <th>{$lang.admin_members_email}</th>
+        <th>{$lang.admin_members_ipaddress}</th>
+        <th>{$lang.admin_members_approve}</th>
+        <th>{$lang.admin_members_ban}</th>
+        <th>Edit</th>
+        <th>{$lang.admin_members_delete}</th>
+        <th>{$lang.admin_members_reset_stats}</th>
+    </thead>
+
+	<tbody>
+		{$rows <!-- html/parts/admin-members-row-each.html -->}
+	</tbody>
+</table>
+
+{$pagination}
