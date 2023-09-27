@@ -1,183 +1,612 @@
+
 <div class="main-wrapper">
+    <!-- <div class="play-box">
+        <button class="btn btn-primary" onclick="toggleFullScreen()">Tap here to start</button>
+    </div> -->
+
 
     <a id="leaveButton" href="lobby.php" class="poker__to-lobby" style="z-index: 1;">
+
         <span class="icon-lobby_icon"></span>
-        <span>{__(Lobby)}</span>
+
+        <span id="lobbyButtonText">{__(Leave Lobby)}</span>
+
     </a>
 
+    <!-- poker__head START -->
+
+    <div class="poker__head">
+
+        <h1>{__(Table)} {$table.name} #{$table.id}</h1>
+
+        <h2>{__(Type)}: {$table.type}</h2>
+
+        <h2>{__(Blinds)}: {$table.blinds}</h2>
+
+    </div>
+
+    <!-- poker__head END -->
+
     <div class="poker__wrapper">
-
-        <!-- poker__head START -->
-        <div class="poker__head">
-            <h1>{__(Table)} {$table.name} #{$table.id}</h1>
-            <h2>{__(Type)}: {$table.type}</h2>
-            <h2>{__(Blinds)}: {$table.blinds}</h2>
-        </div>
-        <!-- poker__head END -->
-
+        
         <!-- poker__main START -->
+
         <div class="poker__table">
+
             <div class="poker__table-img">
+
                 <img class="poker__table-img-desc" src="images/tablelayout/{$tablestyle}.png" alt="table">
+
                 <img class="poker__table-img-mob" src="images/tablelayout/{$tablestyle}_mob.png" alt="table">
+
             </div>
+
+
 
             <div class="poker__table-pot">
+
                 <div class="poker__table-pot-chips">
+
                     <img src="{$theme.url}/images/stavka_yellow_50.svg" alt="yel">
+
                     <img src="{$theme.url}/images/stavka_red_5.svg" alt="yel">
+
                     <img src="{$theme.url}/images/stavka_black_100.svg" alt="yel">
+
                     <img src="{$theme.url}/images/stavka_yellow_50.svg" alt="yel">
+
                 </div>
+
                 <div id="tablelog">{$table.log}</div>
+
                 <div id="tablepot" class="poker__table-pot-summ">0</div>
+
             </div>
+
             <div class="poker__table-cards">
+
                 <div id="card1">{$card1}</div>
+
                 <div id="card2">{$card2}</div>
+
                 <div id="card3">{$card3}</div>
+
                 <div id="card4">{$card4}</div>
+
                 <div id="card5">{$card5}</div>
+
             </div>
+
+
 
             <div class="poker__users">
+
                 {$players <!-- html/parts/poker-player-each.html -->}
+
             </div>
 
+
+
         </div>
+
         <!-- poker__main END -->
 
-        <!-- poker__bottom START -->
-        <div class="poker__bottom">
 
-            <div class="poker__bottom-left">
-                <button class="poker-btn poker__chat-btn">{__(Chat)}</button>
-                <div id="startButton">
-                    <button class="poker-btn poker__start-btn" onclick="push_action('start');">{__(Start Game)}</button>
-                </div>
-                <div id="showHideButton">
-                    <button class="poker-btn poker__hidecards-btn">{__(Hide Cards)}</button>
-                </div>
-                <div id="showRebuyButton"></div>
-            </div>
+    </div>
 
-            <div id="buttonContainer">
-                <div id="checkboxes" class="poker__bottom-right">
-                    {$checkboxes <!-- html/parts/poker-button-checkboxes.html -->}
-                </div>
+    <!-- poker__bottom START -->
 
-                <div id="buttons" class="poker__bottom-right">
-                    {$buttons <!-- html/parts/poker-button-*.html -->}
-                </div>
-            </div>
+    <div class="poker__bottom">
+
+        <div class="poker__left-action">
 
             <!-- CHAT POPUP START -->
-            <div class="poker__chat">
+
+            <div class="poker__chat active">
+
+                <div class="poker__chat-close">
+
+                    <button type="button" class="btn-close btn-close-white" aria-label="Close" style="display:none"></button>
+
+                </div>
+
+
+
+                <div class="poker__chat-open">
+
+                    <button type="button" class="btn-open btn-open-white">^</button>
+
+                </div>
+
+
 
                 <div class="poker__chat-head">
-                    <div class="poker__chat-head-tab" data-tabname="chat">
-                        <span class="icon-chat_icon">
-                            <span class="path1"></span>
-                            <div class="icon-chat_icon__circle"></div>
-                        </span>
-                        <span class="text">{__(Chat)}</span>
-                    </div>
                     <div class="poker__chat-head-tab" data-tabname="logs">
+
                         <span class="icon-logs_icon"></span>
+
                         <span class="text">{__(Logs)}</span>
+
                     </div>
-                    <div class="poker__chat-head-close"></div>
+                    <div class="poker__chat-head-tab" data-tabname="chat">
+
+                        <span class="icon-chat_icon">
+
+                            <span class="path1"></span>
+
+                            <div class="icon-chat_icon__circle"></div>
+
+                        </span>
+
+                        <span class="text">{__(Chat)}</span>
+
+                    </div>
+                    
+                   
+
+                    <!-- <div class="poker__chat-head-close"></div> -->
+
                 </div>
+
+
 
                 <div class="poker__chat-content">
+
                     <div class="poker__chat-content-tab" data-tabcontent="chat">
+
                         <div id="userchatdiv" class="poker__chat-messages">
+
                             {$userchat}
+
                         </div>
 
-                        <form class="poker__chat-write" onsubmit="pushChat(event);">
+
+
+                        <form class="poker__chat-write" onsubmit="pushChat(event);" style="display: none;">
+
                             <input class="write-input" type="text" placeholder="{__(Write message)}">
+
                             <button type="submit">
+
                                 <span class="icon-send_icon"></span>
+
                             </button>
+
                         </form>
+
                     </div>
+
                     <!-- chat tab end -->
 
+
+
                     <div class="poker__chat-content-tab" data-tabcontent="logs">
+
                         <div id="chatdiv" class="poker__chat-logs">
+
                             {$dealerchat}
+
                         </div>
+
                     </div>
+
                     <!-- logs tab end -->
+
                 </div>
+
                 <!-- poker__chat-content -->
+
             </div>
+
             <!-- CHAT POPUP END -->
 
+
+
+
+
+            <div class="poker__bottom-left">
+
+                <button class="poker-btn poker__chat-btn" style="visibility:hidden;display: none;">{__(Chat)}</button>
+
+                <div id="startButton">
+
+                    <button class="poker-btn poker__start-btn" onclick="push_action('start');">{__(Start Game)}</button>
+
+                </div>
+
+                <div id="showHideButton">
+
+                    <button class="poker-btn poker__hidecards-btn">{__(Hide Cards)}</button>
+
+                </div>
+
+                <div id="showRebuyButton"></div>
+
+            </div>
+
         </div>
-        <!-- poker__bottom END -->
+
+        <div id="buttonContainer">
+
+            <!--<div id="checkboxes" class="poker__bottom-right" style="visibility:hidden">-->
+
+            <!--{$checkboxes -->
+
+            <!-- html/parts/poker-button-checkboxes.html -->
+
+            <!--}-->
+
+            <!--</div>-->
+
+
+
+            <div id="buttons" class="poker__bottom-right">
+
+                {$buttons <!-- html/parts/poker-button-*.html -->}
+
+            </div>
+
+        </div>
+
+
+
+
+
+
 
     </div>
+
+    <!-- poker__bottom END -->
 
     <div style="display:none;">
+
         <form name="checkmov">
+
             <input type="hidden" name="lastmove" id="lastmove">
+
             <input type="hidden" name="tomove" id="tomove">
+
             <input type="hidden" name="hand" id="hand">
+
         </form>
+
         <div class="tiny">
+
             <div id="bankroll"></div>
+
         </div>
+
         <div id="flashObject"></div>
+
         <div id="chatSounds">
+
             <audio id="aud-card" preload>
+
                 <source src="{$sound.card}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-chat" preload>
+
                 <source src="{$sound.chat}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-check" preload>
+
                 <source src="{$sound.check}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-chips" preload>
+
                 <source src="{$sound.chips}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-deal" preload>
+
                 <source src="{$sound.deal}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-flop" preload>
+
                 <source src="{$sound.flop}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-fold" preload>
+
                 <source src="{$sound.fold}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-shuffle" preload>
+
                 <source src="{$sound.shuffle}" type="audio/mpeg">
+
             </audio>
+
             <audio id="aud-timerleft" preload>
+
                 <source src="{$sound.timerleft}" type="audio/mpeg">
+
             </audio>
+
+            <audio id="aud-timerleft2" preload>
+
+                <source src="{$sound.timerleft}" type="audio/mpeg">
+
+            </audio>
+
         </div>
+
         <div id="chatdiv"></div>
+
         <div id="userchatdiv"></div>
+
     </div>
+
 </div>
+
+<div id="phone">
+
+</div>
+
+<div id="port_warning">
+
+    Please rotate your device!
+
+</div>
+
 <script type="text/javascript">
+
     jQuery(document).on("keyup", function (e) {
+
         if (e.code === 'KeyF' && jQuery("button[data-poker-btn='fold']").length == 1)
+
             push_action('fold');
+
         else if (e.code === 'KeyC' && jQuery("button[data-poker-btn='call']").length == 1)
+
             push_action('call');
+
         else if (e.code === 'KeyC' && jQuery("button[data-poker-btn='check']").length == 1)
+
             push_action('check');
+
     });
+
 </script>
+
 <script type="text/javascript">
+
     jQuery(document).on("click", ".poker__hidecards-btn", function (e) {
+
         push_action("hide-my-cards");
+
     });
+
     jQuery(document).on("click", ".poker__showcards-btn", function (e) {
+
         push_action("show-my-cards");
+
     });
+
+
+
+    jQuery(document).on("click", ".btn-close", function (e) {
+
+        jQuery('.poker__chat-write').toggle();
+
+        jQuery('#userchatdiv').show();
+
+        jQuery('.btn-close').hide();
+
+        // jQuery('.poker__chat-head').hide();
+
+        // jQuery('.poker__chat').css('height', '100px');
+
+       
+        let isMobile = window.matchMedia("only screen and (max-width: 1181px)").matches;
+
+    if (isMobile) {
+        jQuery('.poker__chat').css('height', '38px');
+    }
+    else{
+        jQuery('.poker__chat').css('height', '51px');
+    }
+
+        jQuery('.poker__chat-open').show();
+
+        jQuery('.btn-open').show();
+
+        $("#userchatdiv").animate({ scrollTop: $('#userchatdiv').prop("scrollHeight") }, 50);
+
+
+
+        // jQuery('.poker__chat-content').css('height', '100px');
+
+
+
+    });
+
+
+
+
+
+
+
+    jQuery(document).on("click", ".btn-open", function (e) {
+
+        jQuery('.poker__chat-write').toggle();
+
+        jQuery('#userchatdiv').show();
+
+        jQuery('.btn-close').show();
+
+        // jQuery('.poker__chat-head').show();
+
+        jQuery('.poker__chat').css('height', '200px');
+
+        jQuery('.poker__chat-open').hide();
+
+        jQuery('.btn-open').hide();
+
+        $("#userchatdiv").animate({ scrollTop: $('#userchatdiv').prop("scrollHeight") }, 50);
+
+    });
+
+
+
+
+
+
+
 </script>
+
+
+
+
+
+<Style>
+    #port_warning {
+
+        display: none;
+
+    }
+
+    #phone {
+
+        height: 50px;
+
+        width: 100px;
+
+        border: 3px solid white;
+
+        border-radius: 10px;
+
+        margin-left: 150px;
+
+        margin-top: 290px;
+
+        animation: rotate 1.5s ease-in-out infinite alternate;
+
+        /* display: none; */
+
+    }
+
+
+
+    @media only screen and (orientation:portrait) {
+
+        body *:not(#port_warning, #phone) {
+
+            height: 100vh;
+
+            display: none;
+
+        }
+
+
+
+        .main-wrapper {
+
+            display: none;
+
+        }
+
+
+
+        @keyframes rotate {
+
+            0% {
+
+                transform: rotate(-90deg)
+            }
+
+            50% {
+
+                transform: rotate(-180deg)
+            }
+
+            100% {
+
+                transform: rotate(-180deg)
+            }
+
+        }
+
+        #port_warning {
+
+            display: block;
+
+            color: #fff;
+
+            text-align: center;
+
+            font-size: 28px;
+
+            padding: 30px 10px;
+
+            overflow: hidden;
+
+        }
+
+    }
+
+    @media only screen and (orientation: landscape) {
+
+        #phone {
+
+            display: none;
+
+        }
+
+        .main-wrapper {
+
+            display: flex;
+
+        }
+
+        @media only screen and (orientation: landscape) {
+
+            .poker__chat.active {
+
+                bottom: 0px;
+
+            }
+
+        }
+
+
+
+        /* #buttonContainer, .poker__bottom-left
+
+        {
+
+            margin-top:-16%;
+
+        } */
+
+
+
+        .poker__to-lobby {
+
+            display: none;
+
+
+
+        }
+
+
+
+        .poker__to-lobby .icon-lobby_icon {
+
+            margin-left: 8px;
+
+        }
+
+    }
+</Style>

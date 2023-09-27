@@ -2,7 +2,7 @@
 var minRaise  = ({$min_raise} > 0)     ? ({$min_raise} / {$divider}) : 0;
 var maxRaise  = ({$max_raise} > 0)     ? ({$max_raise} / {$divider}) : 0;
 var initRaise = ({$initial_raise} > 0) ? ({$initial_raise} / {$divider}) : 0;
-var raiseStep = ({$raise_step} > 0)    ? ({$raise_step} / {$divider}) : 0;
+var raiseStep = 1;
 
 var betSlider = document.querySelector('.poker__betpopup-slider');
 noUiSlider.create(betSlider, {
@@ -45,6 +45,8 @@ betSlider.noUiSlider.on('update', function (values, handle) {
 
 $('.poker__bet-btn').one('click', function()
 {
+	// $('.poker-btn').hide();
+	$(this).show();
 	betSlider.noUiSlider.updateOptions({
         range: {
             'min': minRaise,
@@ -52,6 +54,15 @@ $('.poker__bet-btn').one('click', function()
         }
     });
 	$('.poker__bet-btn').off('click');
+	$('.poker_input').show();
+	$('#bet_amt').attr('max', maxRaise);
+	$('#bet_amt').val(0);
+});
+
+$('#bet_amt').on('keyup', function () {
+	betSlider.noUiSlider.updateOptions({
+        start: $('#bet_amt').val()
+    });
 });
 
 function raise_level(amount)

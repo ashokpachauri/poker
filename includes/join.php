@@ -1,19 +1,21 @@
-<?php 
+<?php
+
 require('sec_inc.php'); 
 
 header('Content-Type: text/javascript');
 
 // if ip check is on
-if (IPCHECK == 1)
-{
-	// ip address
-	$ip = $_SERVER['REMOTE_ADDR'];  
-	$ipq = $pdo->query("select ipaddress from " . DB_PLAYERS . " where ipaddress = '$ip' and gID = " . $gameID); 
 
-	// if user with the same ip exists, die
-	if ($ipq->rowCount() > 0)
-		die();
-} 
+// if (IPCHECK == 1)
+// {
+// 	echo 'ip check is on';
+// 	// ip address
+// 	$ip = $_SERVER['REMOTE_ADDR'];
+// 	$ipq = $pdo->query("select ipaddress from " . DB_PLAYERS . " where ipaddress = '$ip' and gID = " . $gameID); 
+// 	// if user with the same ip exists, die
+// 	if ($ipq->rowCount() > 0)
+// 		die();
+// } 
 	
 $time = time(); 
 $action = addslashes($_GET['action']); 
@@ -25,7 +27,10 @@ if ($action > 0 && $action < 11)
 	
 	// if player is already joined, die
 	if ($zq->rowCount() == 1)
+	{
+		//echo "SELECT gameID FROM " . DB_POKER . " WHERE gameID = $gameID AND (p1name = '$plyrname' OR p2name = '$plyrname' OR p3name = '$plyrname' OR p4name = '$plyrname' OR p5name = '$plyrname' OR p6name = '$plyrname' OR p7name = '$plyrname' OR p8name = '$plyrname' OR p9name = '$plyrname' OR p10name = '$plyrname')";
 		die();
+	}
 	
 	$cq = $pdo->query("SELECT * FROM " . DB_POKER . " WHERE gameID = " . $gameID . " AND p".$action."name = ''");
 	
@@ -259,6 +264,10 @@ if ($action > 0 && $action < 11)
 				poker_log($plyrname, GAME_PLAYER_BUYS_IN . ' ' . money($chips, true, $moneyPrefix), $gameID);
 ?>
 document.getElementById('player-<?php echo $action; ?>-image').innerHTML = '<img src="themes/<?php echo THEME; ?>/images/13.gif">';
+
+
+//removing click cursor on all buying option on joining table
+$('.poker__user-seat').css('cursor', 'auto');
 <?php }else{ ?>
 	<?php if($tabletype == 't'){ ?>
 	alert('<?php echo INSUFFICIENT_BANKROLL_TOURNAMENT;?>');

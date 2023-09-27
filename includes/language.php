@@ -310,6 +310,7 @@ ops_define( 'GAME_MSG_WINNING_HAND', __( 'Winning hand:', 'core' ) );
 ops_define( 'GAME_MSG_PROCESSING', __( 'Processing...', 'core' ) );
 ops_define( 'BUTTON_START', __( 'Start Game', 'core' ) );
 ops_define( 'BUTTON_CALL', __( 'Call', 'core' ) );
+ops_define( 'BUTTON_POT', __( 'Pot', 'core' ) );
 ops_define( 'BUTTON_CHECK', __( 'Check', 'core' ) );
 ops_define( 'BUTTON_FOLD', __( 'Fold', 'core' ) );
 ops_define( 'BUTTON_REBUY', __( 'Rebuy', 'core' ) );

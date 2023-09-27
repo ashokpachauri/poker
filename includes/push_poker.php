@@ -10,6 +10,7 @@ $BUTTON_FOLD     = BUTTON_FOLD;
 $BUTTON_REBUY    = BUTTON_REBUY;
 $BUTTON_CHECK    = BUTTON_CHECK;
 $BUTTON_CALL     = BUTTON_CALL;
+$BUTTON_POT      = BUTTON_POT;
 $BUTTON_BET      = BUTTON_BET;
 $BUTTON_ALLIN    = BUTTON_ALLIN;
 $GAME_PLAYER_POT = GAME_PLAYER_POT;
@@ -699,6 +700,7 @@ elseif ( (is_interplay($hand) || is_straddling($hand)) && $player == $tomove && 
 		array(
 	    	'page'     => 'includes/push_poker.php',
 	    	'location' => 'raise_step'
+
 		)
 	);
 	$opsTheme->addVariable('raise_step', $raiseStep);
@@ -816,6 +818,13 @@ elseif ( (is_interplay($hand) || is_straddling($hand)) && $player == $tomove && 
 			$opsTheme->addVariable('call_money', money_small( ($tablebet - $playerbet), true, $moneyPrefix));
 		?>
 		betbuttons += '<?php echo $opsTheme->viewPart('poker-button-call'); ?>';
+		<?php } ?>
+		<?php if ($displayPotButton) {
+			$ppot     = intval($playerpot);
+			$opsTheme->addVariable('call_money', money_small( ($ppot), true, $moneyPrefix));
+		?>
+
+		betbuttons += '<?php echo $opsTheme->viewPart('poker-button-pot'); ?>';
 		<?php } ?>
 
 		<?php if ($displayCheckButton) { ?>

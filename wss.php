@@ -1365,9 +1365,9 @@ class OPSGame implements MessageComponentInterface
             $raise  = intval($data->amount);
             $action = $raise >= intval($mover->pot) ? 'allin' : 'raise';
 
-            if ($raise < 1 || $raise > $max):
-                $isBet = false;
-            endif;
+            // if ($raise < 1 || $raise > $max):
+            //     $isBet = false;
+            // endif;
         endif;
 
         $okay = ($this->getPlayers($mover, true) > 1 && ($this->isStraddling($mover) || ($this->isInterplay($mover) && $isBet == true))) ? true : false;
@@ -2626,6 +2626,17 @@ class OPSGame implements MessageComponentInterface
                     'location' => 'display_fold_button'
                 )
             );
+            $displayPotButton  = $this->addons->get_hooks(
+                array(
+                    'content' => true,
+                    'wss'     => $this,
+                    'player'  => $player,
+                ),
+                array(
+                    'page'     => 'wss',
+                    'location' => 'display_pot_button'
+                )
+            );
             $displayCallButton  = $this->addons->get_hooks(
                 array(
                     'content' => ($player->game->bet > $playerbet && $winpot >= ($player->game->bet - $playerbet)) ? true : false,
@@ -2737,24 +2748,25 @@ class OPSGame implements MessageComponentInterface
                     ));
                     $raiseLevelsHtml .= $this->theme->viewPart('poker-raise-level');
                 }
-
+                
                 $this->theme->addVariable('raise_levels', $raiseLevelsHtml);
 
                 $sliderHtml = $this->theme->viewPart('poker-raise-slider');
                 $this->theme->addVariable('slider_html', $sliderHtml);
                 $raiseJs = $this->theme->viewPart('poker-raise-js');
+
             }
             else
             {
                 $raiseJs = $this->theme->viewPart('poker-raise-js-none');
             }
-
             $buttons = [
                 'rebuy' => $displayRebuyButton ? $this->theme->viewPart('poker-button-rebuy') : '', #showRebuyButton
                 'fold'  => $displayFoldButton ? $this->theme->viewPart('poker-button-fold') : '',
                 'call'  => $displayCallButton ? $this->theme->viewPart('poker-button-call') : '',
                 'check' => $displayCheckButton ? $this->theme->viewPart('poker-button-check') : '',
                 'allin' => $displayAllInButton ? $this->theme->viewPart('poker-button-allin') : '',
+                'pot' => $displayPotButton ? $this->theme->viewPart('poker-button-pot') : $this->theme->viewPart('poker-button-pot'),
                 'raise' => $displayRaiseButton ? $this->theme->viewPart('poker-button-raise') . $raiseJs : '',
             ];
 

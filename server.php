@@ -16,7 +16,8 @@ $http = new HttpServer($wss);
 
 $server = IoServer::factory(
     $http,
-    empty(WEBSOCKET_PORT) ? ((isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] === 443) ? 443 : 80) : WEBSOCKET_PORT
+    3000
+   // empty(WEBSOCKET_PORT) ? ((isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] === 443) ? 443 : 80) : WEBSOCKET_PORT
 );
 
 $wss->enableKeepAlive($server->loop, 5);

@@ -3,6 +3,9 @@
 	<span class="poker__bet-btn-summa" style="display: none;">0</span>
 </button>
 
+<div class="poker_input" style="display: none;">
+	<input type="number" value={$min_raise_label} min="1" id="bet_amt" class="form-control">
+</div>
 <!-- BET POPUP START -->
 <div class="poker__betpopup">
 	<div class="poker__betpopup-slider-wrap">
@@ -10,7 +13,7 @@
 		<div class="poker__betpopup-slider-bg">
 			<div class="poker__betpopup-slider"></div>
 		</div>
-		<p>{$money_prefix} {$min_raise_label}</p>
+		<p class="poker__bet-btn-summa">{$money_prefix} {$min_raise_label}</p>
 	</div>
 	{$raise_levels}
 </div>

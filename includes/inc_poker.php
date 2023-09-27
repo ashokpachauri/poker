@@ -2,7 +2,6 @@
 
 if ($valid == false)
     header('Location: login.php');
-
 if (empty($gameID))
     header('Location: lobby.php');
 

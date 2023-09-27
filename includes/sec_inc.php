@@ -1,6 +1,6 @@
 <?php
 session_start();
-define('OPS_DEBUG', true);
+define('OPS_DEBUG', false);
 
 if (isset($_GET['debug']) || OPS_DEBUG === true)
 {

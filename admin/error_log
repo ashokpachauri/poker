@@ -1,0 +1,16 @@
+[22-Jun-2023 12:59:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/realtyevo/public_html/poker.hashevo.com/admin/edit-member.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/realtyevo/public_html/poker.hashevo.com/admin/edit-member.php on line 2
+[23-Jun-2023 10:32:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php on line 3
+[23-Jun-2023 10:32:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php on line 3
+[23-Jun-2023 10:32:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/realtyevo/public_html/poker.hashevo.com/admin/settings.php on line 3

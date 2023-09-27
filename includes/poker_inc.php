@@ -693,7 +693,7 @@ function OPS_mail($to, $subject, $body)
     $mailfrom = $_SERVER['HTTP_HOST'];
     $mailfrom = str_replace('www.', '', $mailfrom);
     $mailf    = explode('/', $mailfrom);
-    $from     = 'support@' . $mailf[0];
+    $from     = SMTP_USER;//'support@' . $mailf[0];
 
     if (SMTP_ON === 'yes')
     {
@@ -716,7 +716,7 @@ function OPS_mail($to, $subject, $body)
             }
 
             //Server settings
-            $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
+            // $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host       = SMTP_HOST;
             $mail->SMTPAuth   = (SMTP_AUTH === 'yes') ? true : false;
@@ -729,7 +729,8 @@ function OPS_mail($to, $subject, $body)
                 $mail->SMTPAutoTLS = false;
 
             // From
-            $mail->setFrom($from, $mailf[0]);
+            // $mail->setFrom($from, $mailf[0]);
+            $mail->setFrom($from, TITLE);
             //Recipients
             $mail->addAddress($to);
             
@@ -983,19 +984,19 @@ function money($val, $showPrefix = true, $customPrefix = false)
         if (SMALLBETFUNC == 3) $val = ($val / 10);
         if ($val > 1000000000)
         {
-            $money = $prefix . number_format(($val / 1000000000) , 0, MONEY_THOUSA, MONEY_DECIMA) . ' B';
+            $money = $prefix . number_format(($val / 1000000000) , 0, MONEY_DECIMA, MONEY_THOUSA) . ' B';
         }
         elseif ($val > 100000000)
         {
-            $money = $prefix . number_format(($val / 1000000) , 0, MONEY_THOUSA, MONEY_DECIMA) . ' M';
+            $money = $prefix . number_format(($val / 1000000) , 0, MONEY_DECIMA, MONEY_THOUSA) . ' M';
         }
         elseif ($val > 1000000)
         {
-            $money = $prefix . number_format(($val / 1000000) , 1, MONEY_THOUSA, MONEY_DECIMA) . ' M';
+            $money = $prefix . number_format(($val / 1000000) , 1, MONEY_DECIMA, MONEY_THOUSA) . ' M';
         }
         elseif (SMALLBETFUNC == 1)
         {
-            $money = $prefix . number_format($val, 2, MONEY_THOUSA, MONEY_DECIMA);
+            $money = $prefix . number_format($val, 2, MONEY_DECIMA, MONEY_THOUSA);
         }
         else
         {
@@ -1003,10 +1004,10 @@ function money($val, $showPrefix = true, $customPrefix = false)
             {
                 $len = strlen($val);
                 $dec = $len - ($pos + 1);
-                $money = $prefix . number_format($val, $dec, MONEY_THOUSA, MONEY_DECIMA);
+                $money = $prefix . number_format($val, $dec, MONEY_DECIMA, MONEY_THOUSA);
             }
             else
-                $money = $prefix . number_format($val, 0, MONEY_THOUSA, MONEY_DECIMA);
+                $money = $prefix . number_format($val, 0, MONEY_DECIMA, MONEY_THOUSA);
         }
     }
     elseif ($val == 'FOLD')

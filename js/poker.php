@@ -51,7 +51,6 @@ setTimeout(function()
 {
   clearInterval(pushpokerInterval);
   socket = new WebSocket('<?php echo WEBSOCKET_ADDR; ?>?gamepass=<?php echo $idr['gamepass']; ?>&player=' + player);
-
   socket.onopen = function (e) {
     socketSend({type: "enter", gameID: gameID});
   };
@@ -59,12 +58,44 @@ setTimeout(function()
   socket.onclose = function (e) {
     if (exit)
       return;
-    
     window.location.reload();
   }
 
   socket.onmessage = function (e) {
     let data = JSON.parse(e.data);
+    console.log(data.type);
+    if(data.type=='enter' || data.type=='join'  || data.type=='alone'   )
+    {
+      var is_joined=false;
+      var player_data=data.players;
+      player_data.forEach(player_single => {
+        if(player_single.name==player)
+        {
+          is_joined=true;
+        }
+      });
+
+
+      if(is_joined==true)
+      {
+        $('.poker__to-lobby').show();
+        $('#lobbyButtonText').text('Leave Table');
+        $('.poker__to-lobby').css('width', '130px');
+      }
+      else
+      {
+        $('.poker__to-lobby').show();
+        $('#lobbyButtonText').text('Back to Lobby');
+        $('.poker__to-lobby').css('width', '130px');
+      }
+    }
+    
+    if(data.type=='leave')
+    {
+      $('.poker__to-lobby').show();
+        $('#lobbyButtonText').text('Back to Lobby');
+        $('.poker__to-lobby').css('width', '130px');
+    }
 
     if (_DEBUG)
       console.log('down', data.type, data);
@@ -216,12 +247,23 @@ const OpsGame = {
       jQuery('#player-' + plyr.seat + '-bet').html( plyr.bet );
       jQuery('#player-' + plyr.seat + '-cards').html( plyr.cards.join("") );
 
-      if (plyr.name !== '' && plyr.name === player)
+      if (plyr.name !== '' && plyr.name === player.name){
         seat = parseInt(plyr.seat);
+        break;
+      }
+      else{
+        seat = 0
+      }
     }
 
     jQuery("#checkboxes").show();
     jQuery("#buttons").hide();
+
+    //removing click cursor on all buying option on page load 
+    if(seat!=0)
+    {
+      $('.poker__user-seat').css('cursor', 'auto');
+    }
 
     if (table.interplay)
     {
@@ -541,9 +583,14 @@ const OpsGame = {
       jQuery('#player-' + plyr.seat + '-info').html( plyr.info );
       jQuery('#player-' + plyr.seat + '-bet').html( plyr.bet );
       jQuery('#player-' + plyr.seat + '-cards').html( plyr.cards.join("") );
-
-      if (plyr.name !== '' && plyr.name === player)
+  
+      if (plyr.name !== '' && plyr.name === player){
         seat = parseInt(plyr.seat);
+        break;
+      }
+      else{
+        seat = 0
+      }
     }
 
     jQuery("#tablepot").html(table.pot);
@@ -561,6 +608,11 @@ const OpsGame = {
     
     leaveAfter = 1;
     alert("You will be exited once this hand is over.");
+    //$('#leaveButton').css('background', 'gray').text('Leaving...');
+    //push_action('fold');
+    //socketSend({type: "leave"});
+    //$('#leavebutton').click();
+   
   },
   proctor: function (data) {
     jQuery(".player-dealer").hide();
@@ -746,6 +798,9 @@ const pushChat = function (e) {
   input.val('');
   socketSend({type: "self-chat", message: message}, _SELF);
   socketSend({type: "chat", message: message}, _OTHERS);
+  
+  // $('#userchatdiv').scrollTop($('#userchatdiv').height());
+  $("#userchatdiv").animate({ scrollTop: $('#userchatdiv').prop("scrollHeight")}, 50);
 }
 
 let timerleftTimeout, numberInterval;
@@ -765,6 +820,7 @@ function startSeatTimer(seat, total, rem, playSound = 'no') {
     // countdown number display
     var $loaderTimer = $seat.find('.poker__user-photo-loader-timer');
     var startNubmer = $loaderTimer.data('time');
+    var startTimeTotal=startNubmer;
     if ($loaderTimer.length) {
         $loaderTimer.html(startNubmer);
         clearInterval(numberInterval);
@@ -773,6 +829,30 @@ function startSeatTimer(seat, total, rem, playSound = 'no') {
                 clearInterval(numberInterval);
                 return;
             }
+            
+            if(startTimeTotal/2 < startNubmer)
+            {
+              $loader_svg.css('color', 'green');
+            }
+
+            if(startTimeTotal/2 == startNubmer)
+            {
+
+              $loader_svg.css('color', 'yellow');
+              document.getElementById("aud-timerleft").play();
+            }
+            
+            if(startTimeTotal/4 == startNubmer)
+            {
+              $loader_svg.css('color', 'red');
+              document.getElementById("aud-timerleft").play();
+                
+              setTimeout(function () {
+                document.getElementById("aud-timerleft2").play();
+              }, 1000);
+            }
+            
+
             startNubmer--;
             $loaderTimer.html(startNubmer);
             if (startNubmer < 0) {
@@ -791,12 +871,10 @@ function startSeatTimer(seat, total, rem, playSound = 'no') {
         $loader_svg.animate({ 'stroke-dashoffset': 125 }, loader_svg_current_time * 1000, 'linear');
     }
 
-    if (playSound == 'yes') {
-        var $minusFive = rem - 5;
-        timerleftTimeout = setTimeout(function () {
-            document.getElementById("aud-timerleft").play();
-        }, ($minusFive * 1000));
-    }
+   // var $minusFive = rem - 5;
+   // timerleftTimeout = setTimeout(function () {
+    //    document.getElementById("aud-timerleft").play();
+    //}, ($minusFive * 1000));
 }
 function stopSeatTimer(seat) {
     var $seat = $('#player-' + seat);
@@ -807,6 +885,7 @@ function stopSeatTimer(seat) {
     $seatTimer.data('running', 0).hide();
     clearInterval(numberInterval);
     $loader_svg.stop();
+    $loader_svg.css('color', 'green');
 }
 
 function dochatbox() {
@@ -859,7 +938,7 @@ jQuery(document).on("click", "#leaveButton", function(e) {
   socketSend({type: "leave"}, _EVERYONE);
 });
 
-function push_action(action)
+function push_action(action) 
 {
   if (usewebsockets)
   {
@@ -950,6 +1029,7 @@ function push_action(action)
 function push_talk() {
   var msg = document.talk.talk.value;
   var url = document.location.href;
+  var thisurl=base_url.document.location.href;
   var xend = url.lastIndexOf("/") + 1;
   var base_url = url.substring(0, xend);
   thisurl = base_url + "includes/push_chat.php?msg=" + msg;
@@ -960,14 +1040,17 @@ function push_talk() {
 function sit_down(pos) {
     if ( !usewebsockets )
       return;
+    //disable popup if already seated in table
+    if(seat==0)
+    {
+      if (isAddonActive('buyin')) {
+        buyin_popup(parseInt(pos));
+        return;
+      }
 
-    if (isAddonActive('buyin')) {
-      buyin_popup(parseInt(pos));
+      socketSend({type: 'join', seat: parseInt(pos)}, _EVERYONE);
       return;
     }
-
-    socketSend({type: 'join', seat: parseInt(pos)}, _EVERYONE);
-    return;
 }
 
 function checkloadfile(filename, filetype) {

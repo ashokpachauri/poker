@@ -1,5 +1,5 @@
 <?php
-define('OPS_DEBUG', true);
+define('OPS_DEBUG', false);
 
 if (OPS_DEBUG === true)
 {
